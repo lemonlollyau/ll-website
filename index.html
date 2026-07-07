@@ -33,6 +33,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ::selection{ background:#FF3D97; color:#FFF9E9; }
   input::placeholder, textarea::placeholder{ color:rgba(255,249,233,0.45); }
 </style>
+<style>
+  /* Services accordion */
+  .ll-svc{ border-top:2px solid var(--ink); }
+  .ll-svc:last-child{ border-bottom:2px solid var(--ink); }
+  .ll-svc-head{ width:100%; background:transparent; border:0; cursor:pointer; display:grid; grid-template-columns:64px 1fr auto; gap:20px; align-items:center; padding:28px 20px; text-align:left; border-radius:16px; transition:background .18s; }
+  .ll-svc-head:hover{ background:var(--lemon); }
+  .ll-svc-num{ font-family:'Archivo',sans-serif; font-weight:900; font-size:24px; color:var(--accent); }
+  .ll-svc-title{ font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(22px,2.4vw,36px); letter-spacing:-0.02em; color:var(--ink); line-height:1.05; }
+  .ll-svc-plus{ font-family:'Archivo',sans-serif; font-weight:700; font-size:30px; color:var(--ink); line-height:1; transition:transform .2s; }
+  .ll-svc.open .ll-svc-plus{ transform:rotate(45deg); color:var(--accent); }
+  .ll-svc-body{ max-height:0; overflow:hidden; transition:max-height .3s ease; }
+  .ll-svc.open .ll-svc-body{ max-height:340px; }
+  .ll-svc-body p{ margin:0; padding:0 24px 30px 84px; font-size:16px; line-height:1.5; color:rgba(20,17,9,0.75); max-width:64ch; }
+
+  @media (max-width:640px){
+    .ll-nav-inner{ padding:12px 14px !important; gap:8px !important; }
+    .ll-logo{ font-size:18px !important; }
+    .ll-navlinks{ gap:12px !important; }
+    .ll-navlinks a{ font-size:12.5px !important; }
+    .ll-navlinks a.ll-cta{ padding:7px 12px !important; }
+    .ll-svc-head{ grid-template-columns:40px 1fr auto; gap:12px; padding:22px 6px; }
+    .ll-svc-num{ font-size:18px; }
+    .ll-svc-plus{ font-size:26px; }
+    .ll-svc-body p{ padding:0 6px 24px 52px; }
+  }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -47,15 +73,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- ============ NAV ============ -->
   <nav style="position:sticky; top:0; z-index:100; background:var(--lemon); border-bottom:3px solid var(--ink);">
-    <div style="max-width:1240px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
-      <a href="#top" style="display:inline-flex; align-items:baseline; gap:3px; text-decoration:none; color:var(--ink); font-family:'Archivo',sans-serif; font-weight:900; font-size:24px; letter-spacing:-0.04em;">
+    <div class="ll-nav-inner" style="max-width:1240px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px;">
+      <a href="#top" class="ll-logo" style="display:inline-flex; align-items:baseline; gap:3px; text-decoration:none; color:var(--ink); font-family:'Archivo',sans-serif; font-weight:900; font-size:24px; letter-spacing:-0.04em;">
         lemonlolly<span style="width:9px; height:9px; border-radius:50%; background:var(--accent); display:inline-block; margin-left:1px;"></span>
       </a>
-      <div style="display:flex; align-items:center; gap:30px;">
+      <div class="ll-navlinks" style="display:flex; align-items:center; gap:30px;">
         <a href="#services" style="text-decoration:none; color:var(--ink); font-weight:600; font-size:15px;" style-hover="color:var(--accent);">Services</a>
         <a href="#work" style="text-decoration:none; color:var(--ink); font-weight:600; font-size:15px;" style-hover="color:var(--accent);">Work</a>
         <a href="#about" style="text-decoration:none; color:var(--ink); font-weight:600; font-size:15px;" style-hover="color:var(--accent);">About</a>
-        <a href="#contact" style="text-decoration:none; color:var(--cream); background:var(--ink); font-weight:700; font-size:15px; padding:11px 22px; border-radius:999px; border:2px solid var(--ink); transition:transform .12s, box-shadow .12s;" style-hover="transform:translate(-2px,-2px); box-shadow:4px 4px 0 var(--accent);">Let's talk</a>
+        <a href="#contact" class="ll-cta" style="text-decoration:none; color:var(--cream); background:var(--ink); font-weight:700; font-size:15px; padding:11px 22px; border-radius:999px; border:2px solid var(--ink); transition:transform .12s, box-shadow .12s;" style-hover="transform:translate(-2px,-2px); box-shadow:4px 4px 0 var(--accent);">Let's talk</a>
       </div>
     </div>
   </nav>
@@ -119,35 +145,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <div style="margin-top:36px;">
-        <div style="display:grid; grid-template-columns:76px minmax(180px,1fr) minmax(240px,1.5fr) auto; gap:24px; align-items:center; padding:34px 24px; border-top:2px solid var(--ink); border-radius:16px; transition:background .18s, transform .18s;" style-hover="background:var(--lemon); transform:translateX(8px);">
-          <span style="font-family:'Archivo',sans-serif; font-weight:900; font-size:26px; color:var(--accent);">01</span>
-          <h3 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(24px,2.4vw,36px); letter-spacing:-0.02em; margin:0;">Brand Strategy</h3>
-          <p style="margin:0; font-size:16px; line-height:1.45; color:rgba(20,17,9,0.72);">Positioning, naming, identity and the story that makes people actually care about you.</p>
-          <span style="font-size:26px;">↗</span>
+        <div class="ll-svc">
+          <button class="ll-svc-head" type="button" aria-expanded="false">
+            <span class="ll-svc-num">01</span>
+            <span class="ll-svc-title">Brand Strategy</span>
+            <span class="ll-svc-plus">+</span>
+          </button>
+          <div class="ll-svc-body"><p>Positioning, naming, identity and the story that makes people actually care about you.</p></div>
         </div>
-        <div style="display:grid; grid-template-columns:76px minmax(180px,1fr) minmax(240px,1.5fr) auto; gap:24px; align-items:center; padding:34px 24px; border-top:2px solid var(--ink); border-radius:16px; transition:background .18s, transform .18s;" style-hover="background:var(--lemon); transform:translateX(8px);">
-          <span style="font-family:'Archivo',sans-serif; font-weight:900; font-size:26px; color:var(--accent);">02</span>
-          <h3 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(24px,2.4vw,36px); letter-spacing:-0.02em; margin:0;">Social Media</h3>
-          <p style="margin:0; font-size:16px; line-height:1.45; color:rgba(20,17,9,0.72);">Feeds worth following. Content, community and calendars that stay full week after week.</p>
-          <span style="font-size:26px;">↗</span>
+        <div class="ll-svc">
+          <button class="ll-svc-head" type="button" aria-expanded="false">
+            <span class="ll-svc-num">02</span>
+            <span class="ll-svc-title">Social Media</span>
+            <span class="ll-svc-plus">+</span>
+          </button>
+          <div class="ll-svc-body"><p>Feeds worth following. Content, community and calendars that stay full week after week.</p></div>
         </div>
-        <div style="display:grid; grid-template-columns:76px minmax(180px,1fr) minmax(240px,1.5fr) auto; gap:24px; align-items:center; padding:34px 24px; border-top:2px solid var(--ink); border-radius:16px; transition:background .18s, transform .18s;" style-hover="background:var(--lemon); transform:translateX(8px);">
-          <span style="font-family:'Archivo',sans-serif; font-weight:900; font-size:26px; color:var(--accent);">03</span>
-          <h3 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(24px,2.4vw,36px); letter-spacing:-0.02em; margin:0;">Paid Ads</h3>
-          <p style="margin:0; font-size:16px; line-height:1.45; color:rgba(20,17,9,0.72);">Meta &amp; Google campaigns that spend smart, sell hard and don't blow the budget.</p>
-          <span style="font-size:26px;">↗</span>
+        <div class="ll-svc">
+          <button class="ll-svc-head" type="button" aria-expanded="false">
+            <span class="ll-svc-num">03</span>
+            <span class="ll-svc-title">Paid Ads</span>
+            <span class="ll-svc-plus">+</span>
+          </button>
+          <div class="ll-svc-body"><p>Meta &amp; Google campaigns that spend smart, sell hard and don't blow the budget.</p></div>
         </div>
-        <div style="display:grid; grid-template-columns:76px minmax(180px,1fr) minmax(240px,1.5fr) auto; gap:24px; align-items:center; padding:34px 24px; border-top:2px solid var(--ink); border-radius:16px; transition:background .18s, transform .18s;" style-hover="background:var(--lemon); transform:translateX(8px);">
-          <span style="font-family:'Archivo',sans-serif; font-weight:900; font-size:26px; color:var(--accent);">04</span>
-          <h3 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(24px,2.4vw,36px); letter-spacing:-0.02em; margin:0;">Web Design</h3>
-          <p style="margin:0; font-size:16px; line-height:1.45; color:rgba(20,17,9,0.72);">Fast, friendly websites built to turn Adelaide locals into paying customers.</p>
-          <span style="font-size:26px;">↗</span>
+        <div class="ll-svc">
+          <button class="ll-svc-head" type="button" aria-expanded="false">
+            <span class="ll-svc-num">04</span>
+            <span class="ll-svc-title">Web Design</span>
+            <span class="ll-svc-plus">+</span>
+          </button>
+          <div class="ll-svc-body"><p>Fast, friendly websites built to turn Adelaide locals into paying customers.</p></div>
         </div>
-        <div style="display:grid; grid-template-columns:76px minmax(180px,1fr) minmax(240px,1.5fr) auto; gap:24px; align-items:center; padding:34px 24px; border-top:2px solid var(--ink); border-bottom:2px solid var(--ink); border-radius:16px; transition:background .18s, transform .18s;" style-hover="background:var(--lemon); transform:translateX(8px);">
-          <span style="font-family:'Archivo',sans-serif; font-weight:900; font-size:26px; color:var(--accent);">05</span>
-          <h3 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(24px,2.4vw,36px); letter-spacing:-0.02em; margin:0;">Content</h3>
-          <p style="margin:0; font-size:16px; line-height:1.45; color:rgba(20,17,9,0.72);">Photo, video and copy with personality — none of the boring stock-photo stuff.</p>
-          <span style="font-size:26px;">↗</span>
+        <div class="ll-svc">
+          <button class="ll-svc-head" type="button" aria-expanded="false">
+            <span class="ll-svc-num">05</span>
+            <span class="ll-svc-title">Content</span>
+            <span class="ll-svc-plus">+</span>
+          </button>
+          <div class="ll-svc-body"><p>Photo, video and copy with personality — none of the boring stock-photo stuff.</p></div>
         </div>
       </div>
     </div>
@@ -315,6 +351,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }).catch(function(){
       if (btn){ btn.disabled = false; btn.textContent = label; }
       alert('Network error. Please email indy@lemonlolly.com.au.');
+    });
+  });
+  // Services accordion (tap a category to expand its description)
+  document.querySelectorAll('.ll-svc-head').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.parentNode;
+      var open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
   });
 })();
