@@ -58,6 +58,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .ll-svc-plus{ font-size:26px; }
     .ll-svc-body p{ padding:0 6px 24px 52px; }
   }
+
+  /* Client logo wall */
+  .ll-logowall{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px; margin-top:44px; }
+  .ll-logo-tile{ display:flex; align-items:center; justify-content:center; text-align:center; min-height:150px; padding:28px 24px; border:2px solid rgba(255,249,233,0.16); border-radius:18px; background:rgba(255,249,233,0.02); transition:border-color .18s, background .18s, transform .18s; }
+  .ll-logo-tile:hover{ border-color:var(--lemon); background:rgba(255,225,0,0.06); transform:translateY(-4px); }
+  .ll-logo-word{ font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(18px,2vw,24px); letter-spacing:-0.01em; color:rgba(255,249,233,0.82); }
+  .ll-logo-tile img{ max-width:78%; max-height:66px; width:auto; height:auto; object-fit:contain; opacity:0.9; transition:opacity .18s, transform .18s; }
+  .ll-logo-tile:hover img{ opacity:1; }
+  @media (max-width:640px){ .ll-logowall{ grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; } .ll-logo-tile{ min-height:110px; padding:20px 14px; } }
 </style>
 </head>
 <body>
@@ -192,31 +201,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- ============ WORK ============ -->
   <section id="work" data-screen-label="Work" style="background:var(--ink); color:var(--cream); padding:clamp(64px,8vw,120px) 32px;">
     <div style="max-width:1240px; margin:0 auto;">
-      <span style="font-size:13px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--lemon);">Recent work</span>
-      <h2 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(38px,5vw,72px); line-height:0.98; letter-spacing:-0.03em; margin:12px 0 44px;">Stuff we've shipped.</h2>
+      <span style="font-size:13px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--lemon);">Our clients</span>
+      <h2 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(38px,5vw,72px); line-height:0.98; letter-spacing:-0.03em; margin:12px 0 10px;">Brands we've worked with.</h2>
+      <p style="font-size:17px; line-height:1.5; max-width:52ch; margin:0; color:rgba(255,249,233,0.7);">A few of the Adelaide businesses we've helped look sharp and grow.</p>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:26px;">
-        <a href="#work" style="text-decoration:none; color:var(--cream); display:block; transition:transform .16s;" style-hover="transform:translateY(-6px);">
-          <div style="aspect-ratio:4/3; border:3px solid var(--cream); border-radius:18px; background:#111 url('/assets/temple-day-spa.jpg') center top/cover no-repeat;"></div>
-          <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-top:16px;">
-            <h3 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:22px; margin:0;">Temple Day Spa</h3><span style="color:var(--lemon); font-size:20px;">↗</span>
-          </div>
-          <span style="font-size:14px; color:rgba(255,249,233,0.6);">Brand + Web</span>
-        </a>
-        <a href="#work" style="text-decoration:none; color:var(--cream); display:block; transition:transform .16s;" style-hover="transform:translateY(-6px);">
-          <div style="aspect-ratio:4/3; border:3px solid var(--cream); border-radius:18px; background:#111 url('/assets/nest-and-temple.jpg') center top/cover no-repeat;"></div>
-          <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-top:16px;">
-            <h3 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:22px; margin:0;">Nest &amp; Temple</h3><span style="color:var(--lemon); font-size:20px;">↗</span>
-          </div>
-          <span style="font-size:14px; color:rgba(255,249,233,0.6);">Brand + Web</span>
-        </a>
-        <a href="#work" style="text-decoration:none; color:var(--cream); display:block; transition:transform .16s;" style-hover="transform:translateY(-6px);">
-          <div style="aspect-ratio:4/3; border:3px solid var(--cream); border-radius:18px; background:#111 url('/assets/templeton-built.jpg') center top/cover no-repeat;"></div>
-          <div style="display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-top:16px;">
-            <h3 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:22px; margin:0;">Templeton Built</h3><span style="color:var(--lemon); font-size:20px;">↗</span>
-          </div>
-          <span style="font-size:14px; color:rgba(255,249,233,0.6);">Brand + Web</span>
-        </a>
+      <div class="ll-logowall">
+        <div class="ll-logo-tile"><span class="ll-logo-word">Temple Day Spa</span></div>
+        <div class="ll-logo-tile"><span class="ll-logo-word">Nest &amp; Temple</span></div>
+        <div class="ll-logo-tile"><span class="ll-logo-word">Templeton Built</span></div>
       </div>
     </div>
   </section>
