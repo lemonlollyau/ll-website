@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lemonlolly.com.au/sitemap.xml
