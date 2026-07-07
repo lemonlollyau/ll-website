@@ -298,7 +298,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- footer bar -->
     <div style="max-width:1240px; margin:clamp(56px,7vw,96px) auto 0; padding:28px 0; border-top:2px solid rgba(255,249,233,0.2); display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px;">
       <span style="font-family:'Archivo',sans-serif; font-weight:900; font-size:20px; letter-spacing:-0.04em;">lemonlolly<span style="color:var(--accent);">.</span></span>
-      <span style="font-size:14px; color:rgba(255,249,233,0.6);">© 2026 LemonLolly · Made with a bit of zing in Adelaide 🇦🇺</span>
+      <span style="font-size:14px; color:rgba(255,249,233,0.6);">© 2026 LemonLolly · Made with a bit of zing in Adelaide</span>
       <div style="display:flex; gap:22px; font-size:14px;">
         <a href="#services" style="text-decoration:none; color:rgba(255,249,233,0.7);" style-hover="color:var(--lemon);">Services</a>
         <a href="#work" style="text-decoration:none; color:rgba(255,249,233,0.7);" style-hover="color:var(--lemon);">Work</a>
@@ -338,7 +338,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if (r.ok){
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({ event: 'generate_lead', form_name: 'contact_form' });
-        form.innerHTML = '<div style="padding:26px; border:2px solid var(--lemon); border-radius:14px; text-align:center;"><strong style="font-family:Archivo,sans-serif; font-size:22px; color:var(--lemon);">Thanks &mdash; we will be in touch.</strong><br><span style="color:rgba(255,249,233,0.75);">We usually reply within a day.</span></div>';
+        form.innerHTML = '<div style="padding:26px; border:2px solid var(--lemon); border-radius:14px; text-align:center;"><strong style="font-family:Archivo,sans-serif; font-weight:900; font-size:27px; letter-spacing:-0.02em; color:var(--lemon);">Sweet &mdash; message sent!</strong><br><span style="color:rgba(255,249,233,0.75);">We&rsquo;ll be back to you within a day &mdash; usually a whole lot sooner.</span></div>';
       } else {
         r.json().then(function(d){
           if (btn){ btn.disabled = false; btn.textContent = label; }
