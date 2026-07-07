@@ -10,7 +10,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MF78V8DS');</script>
 <!-- End Google Tag Manager -->
-<title>LemonLolly — Adelaide Marketing Studio | Brand, Social, Ads &amp; Web</title>
+<title>lemonlolly — Adelaide Marketing Studio | Brand, Social, Ads &amp; Web</title>
 <meta name="description" content="LemonLolly is a small Adelaide marketing studio doing brand strategy, social media, paid ads, web design and content for local businesses that want to punch above their weight.">
 <link rel="canonical" href="https://www.lemonlolly.com.au/">
 <meta property="og:type" content="website">
@@ -286,10 +286,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <form id="ll-contact-form" style="display:flex; flex-direction:column; gap:16px;">
-        <input type="text" placeholder="Your name" style="background:transparent; border:2px solid rgba(255,249,233,0.4); border-radius:12px; padding:16px 18px; color:var(--cream); font-family:'Space Grotesk',sans-serif; font-size:16px;" style-focus="border-color:var(--lemon); outline:none;">
-        <input type="email" placeholder="Email" style="background:transparent; border:2px solid rgba(255,249,233,0.4); border-radius:12px; padding:16px 18px; color:var(--cream); font-family:'Space Grotesk',sans-serif; font-size:16px;" style-focus="border-color:var(--lemon); outline:none;">
-        <input type="text" placeholder="What's your business?" style="background:transparent; border:2px solid rgba(255,249,233,0.4); border-radius:12px; padding:16px 18px; color:var(--cream); font-family:'Space Grotesk',sans-serif; font-size:16px;" style-focus="border-color:var(--lemon); outline:none;">
-        <textarea placeholder="Tell us what you need a hand with…" rows="4" style="background:transparent; border:2px solid rgba(255,249,233,0.4); border-radius:12px; padding:16px 18px; color:var(--cream); font-family:'Space Grotesk',sans-serif; font-size:16px; resize:vertical;" style-focus="border-color:var(--lemon); outline:none;"></textarea>
+        <input type="hidden" name="_subject" value="New enquiry from the LemonLolly website">
+        <input type="text" name="name" required placeholder="Your name" style="background:transparent; border:2px solid rgba(255,249,233,0.4); border-radius:12px; padding:16px 18px; color:var(--cream); font-family:'Space Grotesk',sans-serif; font-size:16px;" style-focus="border-color:var(--lemon); outline:none;">
+        <input type="email" name="email" required placeholder="Email" style="background:transparent; border:2px solid rgba(255,249,233,0.4); border-radius:12px; padding:16px 18px; color:var(--cream); font-family:'Space Grotesk',sans-serif; font-size:16px;" style-focus="border-color:var(--lemon); outline:none;">
+        <input type="text" name="business" placeholder="What's your business?" style="background:transparent; border:2px solid rgba(255,249,233,0.4); border-radius:12px; padding:16px 18px; color:var(--cream); font-family:'Space Grotesk',sans-serif; font-size:16px;" style-focus="border-color:var(--lemon); outline:none;">
+        <textarea name="message" required placeholder="Tell us what you need a hand with…" rows="4" style="background:transparent; border:2px solid rgba(255,249,233,0.4); border-radius:12px; padding:16px 18px; color:var(--cream); font-family:'Space Grotesk',sans-serif; font-size:16px; resize:vertical;" style-focus="border-color:var(--lemon); outline:none;"></textarea>
         <button type="submit" style="background:var(--lemon); color:var(--ink); font-family:'Archivo',sans-serif; font-weight:800; font-size:18px; padding:18px 30px; border:3px solid var(--lemon); border-radius:999px; cursor:pointer; transition:transform .12s, box-shadow .12s; box-shadow:0 0 0 var(--accent);" style-hover="transform:translate(-3px,-3px); box-shadow:7px 7px 0 var(--accent);">Send it →</button>
       </form>
     </div>
@@ -322,15 +323,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     el.addEventListener('focus', function(){ el.setAttribute('style', base + ';' + foc); });
     el.addEventListener('blur', function(){ el.setAttribute('style', base); });
   });
-  // Contact form -> compose an email (static site, no backend)
+  // Contact form -> submit via AJAX to Formspree (visitor stays on page), then fire a GA event
   var form = document.getElementById('ll-contact-form');
   if (form) form.addEventListener('submit', function(e){
     e.preventDefault();
-    var f = form.querySelectorAll('input, textarea');
-    var name = f[0].value, email = f[1].value, biz = f[2].value, msg = f[3].value;
-    var body = encodeURIComponent('Name: '+name+'\nEmail: '+email+'\nBusiness: '+biz+'\n\n'+msg);
-    var subject = encodeURIComponent('New enquiry from '+(name||'the website'));
-    window.location.href = 'mailto:hello@lemonlolly.com.au?subject='+subject+'&body='+body;
+    var btn = form.querySelector('button[type="submit"]');
+    var label = btn ? btn.textContent : '';
+    if (btn){ btn.disabled = true; btn.textContent = 'Sending...'; }
+    fetch('https://formspree.io/f/mkolepkn', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(r){
+      if (r.ok){
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'generate_lead', form_name: 'contact_form' });
+        form.innerHTML = '<div style="padding:26px; border:2px solid var(--lemon); border-radius:14px; text-align:center;"><strong style="font-family:Archivo,sans-serif; font-size:22px; color:var(--lemon);">Thanks &mdash; we will be in touch.</strong><br><span style="color:rgba(255,249,233,0.75);">We usually reply within a day.</span></div>';
+      } else {
+        r.json().then(function(d){
+          if (btn){ btn.disabled = false; btn.textContent = label; }
+          alert(d && d.errors ? d.errors.map(function(x){return x.message;}).join(', ') : 'Sorry, something went wrong. Please email indy@lemonlolly.com.au.');
+        });
+      }
+    }).catch(function(){
+      if (btn){ btn.disabled = false; btn.textContent = label; }
+      alert('Network error. Please email indy@lemonlolly.com.au.');
+    });
   });
 })();
 </script>
