@@ -38,7 +38,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="ll-navlinks">
       <a href="/#services">Services</a>
       <a href="/#work">Work</a>
-      <a href="/#about">About</a>
       <a href="/blog" style="color:var(--accent);">Blog</a>
       <a href="/#contact" class="ll-cta">Let's talk</a>
     </div>
@@ -71,15 +70,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </div>
 
-<!-- ============ FEATURED ============ -->
+<!-- ============ FEATURED (image-optional) ============ -->
+<!-- To add a photo: add class "has-img" to .featured-card and a
+     <div class="featured-img" style="background-image:url('/assets/your.jpg')"></div> before .featured-body -->
 <section class="featured">
-  <a class="featured-card" href="/blog/local-seo-for-adelaide-businesses-the-complete-2026-guide" style="text-decoration:none; color:inherit;">
-    <div class="featured-img" style="background-image:url('/blog/local-seo-for-adelaide-businesses-the-complete-2026-guide/hero.png'); background-size:cover; background-position:center;"></div>
+  <a class="featured-card" href="/blog/instagram-content-ideas-local-business" style="text-decoration:none; color:inherit;">
     <div class="featured-body">
-      <span class="tag" data-cat="web">★ Featured · Web &amp; SEO</span>
-      <h2>Local SEO for Adelaide businesses: the complete 2026 guide</h2>
-      <p>Everything that decides whether locals actually find you on Google — profile, reviews, on-page and links — in one no-jargon guide you can work through this week.</p>
-      <span class="card meta" style="border:0; background:none; padding:18px 0 0; margin:0;">Web &amp; SEO · 9 min read · 8 Jul 2026</span>
+      <span class="tag" data-cat="social">★ Latest · Social Media</span>
+      <h2>15 Instagram content ideas for local Adelaide businesses</h2>
+      <p>Never stare at a blank content calendar again. Fifteen post ideas you can shoot on a phone this week — plus why showing up matters, backed by the numbers.</p>
+      <span class="read">Read the post →</span>
+      <span class="fmeta">Social Media · 5 min read · 8 Jul 2026</span>
     </div>
   </a>
 </section>
@@ -90,32 +91,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <h2 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(26px,3vw,40px); letter-spacing:-0.02em; margin:0;">Latest articles</h2>
 
     <div class="grid" id="post-grid">
-      <!-- CARD: near me searches -->
-      <a class="card" href="/blog/how-to-rank-for-near-me-searches-in-adelaide" data-cat="web" data-title="How to rank for 'near me' searches in Adelaide" data-tags="near me searches adelaide local seo google business profile map pack">
-        <div class="card-img" style="background-image:url('/blog/how-to-rank-for-near-me-searches-in-adelaide/hero.png'); background-size:cover; background-position:center; background-color:#141109;"></div>
-        <div class="card-body">
-          <span class="tag" data-cat="web">Web &amp; SEO</span>
-          <h3>How to rank for 'near me' searches in Adelaide</h3>
-          <p class="excerpt">What "near me" actually keys off — and the handful of moves that put your business in front of nearby customers.</p>
-          <span class="meta">5 min read · 9 Jul 2026</span>
-        </div>
-      </a>
 
-      <!-- CARD: local seo pillar -->
-      <a class="card" href="/blog/local-seo-for-adelaide-businesses-the-complete-2026-guide" data-cat="web" data-title="Local SEO for Adelaide businesses: the complete 2026 guide" data-tags="local seo adelaide google business profile citations reviews on-page links map pack pillar">
-        <div class="card-img" style="background-image:url('/blog/local-seo-for-adelaide-businesses-the-complete-2026-guide/hero.png'); background-size:cover; background-position:center;"></div>
-        <div class="card-body">
-          <span class="tag" data-cat="web">Web &amp; SEO</span>
-          <h3>Local SEO for Adelaide: the complete 2026 guide</h3>
-          <p class="excerpt">The whole local ranking picture — profile, citations, reviews, on-page and links — in one practical guide.</p>
-          <span class="meta">9 min read · 8 Jul 2026</span>
-        </div>
-      </a>
-
-
-      <!-- CARD: sample visitor-facing post -->
+      <!-- Fresh start: one published post. New posts land here weekly.
+           Image is optional — swap <div class="card-bar"> for
+           <div class="card-img" style="background-image:url('/assets/your.jpg')"></div> if a photo exists. -->
       <a class="card" href="/blog/instagram-content-ideas-local-business" data-cat="social" data-title="15 Instagram content ideas for local Adelaide businesses" data-tags="instagram reels content social calendar engagement">
-        <div class="card-img" style="background-image:url('/blog/instagram-content-ideas-local-business/hero.png'); background-size:cover; background-position:center;"></div>
+        <div class="card-bar" data-cat="social"></div>
         <div class="card-body">
           <span class="tag" data-cat="social">Social Media</span>
           <h3>15 Instagram content ideas for local businesses</h3>
@@ -124,49 +105,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
       </a>
 
-      <a class="card" href="#" data-cat="brand" data-title="How to name your business so people actually remember it" data-tags="naming brand identity positioning startup">
-        <div class="card-img" style="background-image:linear-gradient(135deg,#FFE100,#141109);"></div>
-        <div class="card-body">
-          <span class="tag" data-cat="brand">Brand Strategy</span>
-          <h3>How to name a business people remember</h3>
-          <p class="excerpt">Five rules for a name that sticks — and the three traps that make good names forgettable.</p>
-          <span class="meta">4 min read · Coming soon</span>
-        </div>
-      </a>
-
-      <a class="card" href="#" data-cat="ads" data-title="Meta ads on a small budget: where $500 a month actually goes" data-tags="meta facebook instagram ads budget roas paid">
-        <div class="card-img" style="background-image:linear-gradient(135deg,#141109,#FFE100);"></div>
-        <div class="card-body">
-          <span class="tag" data-cat="ads">Paid Ads</span>
-          <h3>Meta ads on a $500/month budget</h3>
-          <p class="excerpt">Exactly how we'd split a small monthly ad budget for a local shop — and what to ignore.</p>
-          <span class="meta">7 min read · Coming soon</span>
-        </div>
-      </a>
-
-      <a class="card" href="/blog/why-your-adelaide-business-isnt-showing-up-on-google-maps" data-cat="web" data-title="Why your Adelaide business isn't showing up on Google Maps" data-tags="local seo google business profile maps ranking search">
-        <div class="card-img" style="background-image:url('/blog/why-your-adelaide-business-isnt-showing-up-on-google-maps/hero.png'); background-size:cover; background-position:center;"></div>
-        <div class="card-body">
-          <span class="tag" data-cat="web">Web &amp; SEO</span>
-          <h3>Why you're not showing up on Google Maps</h3>
-          <p class="excerpt">The Google Business Profile fixes that move local rankings — most take ten minutes.</p>
-          <span class="meta">5 min read · 8 Jul 2026</span>
-        </div>
-      </a>
-
-      <a class="card" href="#" data-cat="social" data-title="How often should a small business really post on social media?" data-tags="posting frequency cadence social calendar consistency">
-        <div class="card-img" style="background-image:linear-gradient(135deg,#FFE100,#FF3D97);"></div>
-        <div class="card-body">
-          <span class="tag" data-cat="social">Social Media</span>
-          <h3>How often should you really post?</h3>
-          <p class="excerpt">The honest answer to the question every client asks — plus a cadence you can actually keep.</p>
-          <span class="meta">4 min read · Coming soon</span>
-        </div>
-      </a>
-
     </div>
 
     <div class="no-results" id="no-results">No articles match that yet — try a different word or category.</div>
+
+    <p style="margin-top:36px; font-size:16px; color:var(--muted);">Just getting started — fresh posts land here every week. <a href="#subscribe" style="color:var(--accent); font-weight:600;">Subscribe</a> to catch each one.</p>
   </div>
 </section>
 
@@ -222,14 +165,29 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     noResults.style.display = shown === 0 ? 'block' : 'none';
   }
 
+  function setCat(cat){
+    var btn = filters.querySelector('.chip[data-cat="'+cat+'"]');
+    if (!btn) return;
+    filters.querySelectorAll('.chip').forEach(function(c){ c.classList.remove('active'); });
+    btn.classList.add('active');
+    activeCat = cat;
+    apply();
+  }
+
   search.addEventListener('input', apply);
   filters.addEventListener('click', function(e){
     var btn = e.target.closest('.chip');
     if (!btn) return;
-    filters.querySelectorAll('.chip').forEach(function(c){ c.classList.remove('active'); });
-    btn.classList.add('active');
-    activeCat = btn.getAttribute('data-cat');
-    apply();
+    setCat(btn.getAttribute('data-cat'));
+  });
+
+  // Pre-filter from URL hash (e.g. /blog#social) so in-post links land filtered
+  var validCats = ['all','brand','social','ads','web'];
+  var h = (location.hash || '').replace('#','');
+  if (validCats.indexOf(h) !== -1) setCat(h);
+  window.addEventListener('hashchange', function(){
+    var hh = (location.hash || '').replace('#','');
+    if (validCats.indexOf(hh) !== -1) setCat(hh);
   });
 
   // Subscribe -> Formspree AJAX (stay on page)

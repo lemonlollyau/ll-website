@@ -15,23 +15,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ============================================================
      POST TEMPLATE — duplicate this folder for each new post.
      Fill in: <title>, description, canonical, og tags, the
-     JSON-LD Article block, the category tag, and the <article> body.
+     JSON-LD block, category tag, and the <article> body.
+     Building blocks available: .statband, .founder-quote,
+     .big-quote, .post-figure, .pullbox, .faq, .related.
      ============================================================ -->
 <title>15 Instagram content ideas for local Adelaide businesses | lemonlolly</title>
-<meta name="description" content="Stuck for what to post? Here are 15 Instagram content ideas any local Adelaide business can shoot on a phone this week — no fancy gear, no agency required.">
+<meta name="description" content="Stuck for what to post? 15 Instagram content ideas any local Adelaide business can shoot on a phone this week — plus why showing up matters, backed by the numbers.">
 <link rel="canonical" href="https://www.lemonlolly.com.au/blog/instagram-content-ideas-local-business">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://www.lemonlolly.com.au/blog/instagram-content-ideas-local-business">
 <meta property="og:title" content="15 Instagram content ideas for local Adelaide businesses">
 <meta property="og:description" content="15 phone-shot Instagram post ideas any local business can use this week.">
-<meta property="og:image" content="https://www.lemonlolly.com.au/blog/instagram-content-ideas-local-business/hero.png">
+<meta property="og:image" content="https://www.lemonlolly.com.au/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/blog/blog.css">
-<!-- Article structured data (helps Google show rich results) -->
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -57,14 +58,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="ll-navlinks">
       <a href="/#services">Services</a>
       <a href="/#work">Work</a>
-      <a href="/#about">About</a>
       <a href="/blog" style="color:var(--accent);">Blog</a>
       <a href="/#contact" class="ll-cta">Let's talk</a>
     </div>
   </div>
 </nav>
 
-<!-- ARTICLE -->
+<!-- ARTICLE (no hero image — dives straight into the read) -->
 <article class="article">
   <div class="article-inner">
     <a class="backlink" href="/blog">← All articles</a>
@@ -73,12 +73,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="byline">
       <span>By the lemonlolly team</span><span>·</span><span>8 July 2026</span><span>·</span><span>5 min read</span>
     </div>
-    <div class="hero-img" style="background-image:url('./hero.png'); background-size:cover; background-position:center; background-color:#141109;"></div>
 
     <div class="prose">
-      <p>The hardest part of Instagram isn't the algorithm — it's staring at an empty content calendar on a Monday morning wondering what on earth to post. So here's a cheat sheet: fifteen ideas any local Adelaide business can shoot on a phone this week, no studio and no agency required.</p>
+      <p>The hardest part of Instagram isn't the algorithm — it's staring at an empty content calendar on a Monday morning wondering what on earth to post. So here's a cheat sheet: fifteen ideas any local Adelaide business can shoot on a phone this week. No studio, no agency, no excuses.</p>
+      <p>But first — a quick reason it's worth the twenty minutes.</p>
+    </div>
 
-      <p>Pick three or four, block out twenty minutes, and you've got the week sorted.</p>
+    <!-- STAT BAND: why showing up matters (external sources) -->
+    <div class="statband">
+      <span class="sb-eyebrow">Why bother? The numbers</span>
+      <div class="sb-grid">
+        <div>
+          <div class="sb-num">90%</div>
+          <p class="sb-lbl">of Instagram users follow at least one business account</p>
+        </div>
+        <div>
+          <div class="sb-num">200M</div>
+          <p class="sb-lbl">users visit a business profile every single day</p>
+        </div>
+        <div>
+          <div class="sb-num">80%</div>
+          <p class="sb-lbl">of people search online for a local business every week</p>
+        </div>
+      </div>
+      <p class="sb-src">Sources: <a href="https://www.brightlocal.com/resources/local-seo-statistics/" target="_blank" rel="noopener">BrightLocal</a> &amp; published Instagram business statistics, 2025–26.</p>
+    </div>
+
+    <div class="prose">
+      <p>Translation: your future customers are already on Instagram and already Googling local businesses like yours. The only question is whether they find something worth following when they land on your profile.</p>
 
       <h2>Behind-the-scenes (the stuff people actually love)</h2>
       <p>Your customers are nosy in the best way — they want to see how the sausage gets made. Show them.</p>
@@ -88,9 +110,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li><strong>A tour of your space.</strong> Walk the phone through the shop, kitchen, or studio.</li>
         <li><strong>The bloopers.</strong> The cake that collapsed, the order that went sideways. Imperfection builds trust.</li>
       </ul>
+    </div>
 
-      <blockquote>People don't follow businesses. They follow people they like who happen to run a business.</blockquote>
+    <!-- TEAM PHOTO -->
+    <figure class="post-figure">
+      <img src="/assets/team.jpg" alt="The lemonlolly team in Adelaide" loading="lazy">
+      <figcaption>The lemonlolly crew — proof that "behind the scenes" content doesn't need a film set.</figcaption>
+    </figure>
 
+    <div class="prose">
       <h2>Show your work</h2>
       <p>Proof beats promises every single time. Let the results do the talking.</p>
       <ul>
@@ -98,19 +126,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li><strong>A finished piece, up close.</strong> Slow pans and detail shots — texture sells.</li>
         <li><strong>A customer reaction.</strong> With permission, capture the moment someone sees the result.</li>
       </ul>
+    </div>
 
-      <div class="pullbox">
-        <h3>Quick tip</h3>
-        <p>Film everything vertical (9:16) and keep the first second punchy — that's the frame that decides whether someone keeps watching or scrolls past.</p>
+    <!-- FOUNDER QUOTE (Indy) -->
+    <blockquote class="founder-quote">
+      <p class="fq-text">“People don't scroll past a business they feel like they know. Post like a human, not a brochure — that's the whole trick, and it's free.”</p>
+      <div class="fq-by">
+        <span class="fq-avatar" style="background-image:url('/assets/team.jpg');"></span>
+        <span class="fq-name">Indy<span>Founder, lemonlolly</span></span>
       </div>
+    </blockquote>
 
+    <div class="prose">
       <h2>Be genuinely useful</h2>
-      <p>Teach one small thing and you become the local expert people remember.</p>
+      <p>Teach one small thing and you become the local expert people remember. It's also how you show up in search — helpful content is what Google and Instagram both reward.</p>
       <ul>
         <li><strong>A quick how-to.</strong> One tip, one problem solved, under 30 seconds.</li>
         <li><strong>Myth-busting.</strong> "No, you don't actually need to…" — corrections perform brilliantly.</li>
         <li><strong>A local recommendation.</strong> Shout out another Adelaide business. Goodwill travels.</li>
       </ul>
+
+      <div class="pullbox">
+        <h3>Quick tip</h3>
+        <p>Film everything vertical (9:16) and keep the first second punchy — that's the frame that decides whether someone keeps watching or scrolls past. And make sure your <a href="https://www.google.com/business/" target="_blank" rel="noopener">Google Business Profile</a> is filled in too, so the people who find you on Instagram can also find you on Maps.</p>
+      </div>
 
       <h2>Bring people in</h2>
       <p>Community is the whole point of "social" media.</p>
@@ -121,11 +160,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <li><strong>A local landmark or event.</strong> Tie your post to something Adelaide — Fringe, a footy weekend, a heatwave.</li>
         <li><strong>The "regular order."</strong> Feature a loyal customer and their usual. Everyone wants to be the regular.</li>
       </ul>
-
-      <p>None of these need to be perfect. The businesses that win on Instagram aren't the ones with the best camera — they're the ones that show up consistently and sound like a human. Start with three this week.</p>
     </div>
 
-    <!-- FAQ (great for SEO + featured snippets) -->
+    <!-- INSPIRATIONAL MARKETING QUOTE -->
+    <div class="big-quote">
+      <div class="mark">“</div>
+      <p>Marketing is no longer about the stuff you make, but about the stories you tell.</p>
+      <cite>— Seth Godin, author of <a href="https://seths.blog/" target="_blank" rel="noopener">Purple Cow</a></cite>
+    </div>
+
+    <div class="prose">
+      <p>That's the mindset behind every idea on this list. You're not "doing social media" — you're telling the ongoing story of a local business people want to root for. None of it needs to be perfect. The businesses that win on Instagram aren't the ones with the best camera; they're the ones that show up consistently and sound like a human. Start with three this week.</p>
+    </div>
+
+    <!-- FAQ -->
     <section class="faq">
       <h2>Common questions</h2>
       <div class="faq-item">
@@ -145,11 +193,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- CTA -->
     <div class="article-cta">
       <h2>Too busy to post it all yourself?</h2>
-      <p>We run social media for Adelaide businesses that would rather be running their business. Feeds worth following, calendars that stay full.</p>
+      <p>We run <a href="/#services" style="color:var(--lemon);">social media</a> for Adelaide businesses that would rather be running their business. Feeds worth following, calendars that stay full.</p>
       <a href="/#contact">Let's talk social →</a>
     </div>
   </div>
 </article>
+
+<!-- RELATED READING (internal links — grows as more posts publish) -->
+<section class="related">
+  <h2>Keep reading</h2>
+  <div class="related-grid">
+    <a href="/blog#social">
+      <span class="rl-cat">Social Media</span>
+      <span class="rl-title">More social ideas &amp; tips</span>
+    </a>
+    <a href="/blog#web">
+      <span class="rl-cat">Web &amp; SEO</span>
+      <span class="rl-title">Get found on Google &amp; Maps</span>
+    </a>
+    <a href="/blog">
+      <span class="rl-cat">The Zing</span>
+      <span class="rl-title">Browse the whole blog →</span>
+    </a>
+  </div>
+</section>
 
 <!-- SUBSCRIBE -->
 <section class="subscribe" id="subscribe">
@@ -182,7 +249,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script>
 (function(){
-  // FAQ accordion
   document.querySelectorAll('.faq-q').forEach(function(btn){
     btn.addEventListener('click', function(){
       var item = btn.parentNode;
@@ -190,7 +256,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
   });
-  // Subscribe -> Formspree AJAX
   var sf = document.getElementById('subscribe-form');
   if (sf) sf.addEventListener('submit', function(e){
     e.preventDefault();
@@ -200,7 +265,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .then(function(r){
         if (r.ok){
           window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push({ event:'subscribe', form_name:'blog_subscribe', method:'blog_newsletter' });
+          window.dataLayer.push({ event:'newsletter_signup', form_name:'blog_subscribe' });
           sf.outerHTML = '<div class="sub-done"><strong>You’re in — nice!</strong><br><span style="color:rgba(255,249,233,0.75);">Watch your inbox for the next drop of zing.</span></div>';
         } else { btn.disabled=false; btn.textContent=label; alert('Sorry, something went wrong. Please email hello@lemonlolly.com.au.'); }
       }).catch(function(){ btn.disabled=false; btn.textContent=label; alert('Network error. Please try again.'); });
