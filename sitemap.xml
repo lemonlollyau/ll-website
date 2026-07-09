@@ -15,4 +15,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.lemonlolly.com.au/blog/google-business-profile-the-12-point-optimisation-checklist</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
