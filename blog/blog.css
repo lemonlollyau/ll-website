@@ -55,7 +55,7 @@ img{ max-width:100%; display:block; }
 .featured-card{ max-width:1240px; margin:0 auto; display:block; border:3px solid var(--ink); border-radius:24px; overflow:hidden; box-shadow:10px 10px 0 var(--ink); background:var(--ink); color:var(--cream); }
 .featured-body{ padding:clamp(30px,4vw,56px); display:flex; flex-direction:column; justify-content:center; }
 .featured-body .tag{ align-self:flex-start; }
-.featured-body h2{ font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(28px,3.4vw,52px); line-height:1.0; letter-spacing:-0.028em; margin:16px 0 0; max-width:20ch; }
+.featured-body h2{ color:var(--cream); font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(28px,3.4vw,52px); line-height:1.0; letter-spacing:-0.028em; margin:16px 0 0; max-width:20ch; }
 .featured-body p{ font-size:17px; line-height:1.55; color:rgba(255,249,233,0.78); margin:16px 0 0; max-width:52ch; }
 .featured-body .read{ display:inline-flex; align-self:flex-start; margin-top:26px; text-decoration:none; background:var(--lemon); color:var(--ink); font-family:'Archivo',sans-serif; font-weight:800; font-size:16px; padding:13px 26px; border:3px solid var(--lemon); border-radius:999px; transition:transform .12s, box-shadow .12s; }
 .featured-card:hover .read{ transform:translate(-3px,-3px); box-shadow:6px 6px 0 var(--accent); }
@@ -192,8 +192,12 @@ img{ max-width:100%; display:block; }
 .article-cta{ margin-top:52px; border:3px solid var(--ink); border-radius:22px; background:var(--accent); color:var(--cream); padding:clamp(28px,4vw,44px); text-align:center; box-shadow:8px 8px 0 var(--ink); }
 .article-cta h2{ font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(26px,3.4vw,40px); letter-spacing:-0.02em; margin:0; }
 .article-cta p{ margin:14px auto 0; max-width:44ch; font-size:17px; line-height:1.5; color:rgba(255,249,233,0.9); }
-.article-cta a{ display:inline-block; margin-top:24px; text-decoration:none; background:var(--lemon); color:var(--ink); font-family:'Archivo',sans-serif; font-weight:800; font-size:17px; padding:15px 30px; border:3px solid var(--ink); border-radius:999px; box-shadow:5px 5px 0 var(--ink); transition:transform .12s, box-shadow .12s; }
-.article-cta a:hover{ transform:translate(-3px,-3px); box-shadow:8px 8px 0 var(--ink); }
+/* inline links inside the CTA copy — readable, not a button */
+.article-cta p a{ color:var(--lemon); font-weight:700; text-decoration:underline; text-underline-offset:2px; }
+.article-cta p a:hover{ color:var(--cream); }
+/* the main CTA button (direct child only) */
+.article-cta > a{ display:inline-block; margin-top:24px; text-decoration:none; background:var(--lemon); color:var(--ink); font-family:'Archivo',sans-serif; font-weight:800; font-size:17px; padding:15px 30px; border:3px solid var(--ink); border-radius:999px; box-shadow:5px 5px 0 var(--ink); transition:transform .12s, box-shadow .12s; }
+.article-cta > a:hover{ transform:translate(-3px,-3px); box-shadow:8px 8px 0 var(--ink); }
 
 /* ---- lead-magnet gate ---- */
 .gate{ position:relative; }
