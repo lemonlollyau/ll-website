@@ -22,7 +22,7 @@ img{ max-width:100%; display:block; }
 .ll-nav{ position:sticky; top:0; z-index:100; background:var(--lemon); border-bottom:3px solid var(--ink); }
 .ll-nav-inner{ max-width:1240px; margin:0 auto; padding:16px 32px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
 .ll-logo{ display:inline-flex; align-items:baseline; gap:3px; text-decoration:none; color:var(--ink); font-family:'Archivo',sans-serif; font-weight:900; font-size:24px; letter-spacing:-0.04em; }
-.ll-logo .dot{ width:9px; height:9px; border-radius:50%; background:var(--accent); display:inline-block; margin-left:1px; }
+.ll-logo .dot{ width:9px; height:9px; border-radius:2px; background:var(--accent); display:inline-block; margin-left:1px; }
 .ll-navlinks{ display:flex; align-items:center; gap:30px; }
 .ll-navlinks a{ text-decoration:none; color:var(--ink); font-weight:600; font-size:15px; transition:color .15s; }
 .ll-navlinks a:hover{ color:var(--accent); }
