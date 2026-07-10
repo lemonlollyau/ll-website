@@ -180,13 +180,13 @@ img{ max-width:100%; display:block; }
 .statband .sb-src a{ color:rgba(255,249,233,0.7); }
 
 /* related reading */
-.related{ max-width:1240px; margin:0 auto; padding:clamp(48px,6vw,80px) 32px 0; }
-.related h2{ font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(24px,3vw,36px); letter-spacing:-0.02em; margin:0 0 24px; }
-.related-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; }
-.related-grid a{ text-decoration:none; color:var(--ink); border:3px solid var(--ink); border-radius:18px; padding:22px 24px; background:var(--cream); transition:transform .14s, box-shadow .14s; display:flex; flex-direction:column; gap:8px; }
+.related{ max-width:1240px; margin:0 auto; padding:clamp(60px,8vw,104px) 32px clamp(24px,4vw,52px); }
+.related h2{ font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(24px,3vw,36px); letter-spacing:-0.02em; margin:0 0 32px; padding-top:clamp(40px,5vw,60px); border-top:2px solid rgba(20,17,9,0.14); }
+.related-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px; }
+.related-grid a{ text-decoration:none; color:var(--ink); border:3px solid var(--ink); border-radius:18px; padding:30px 30px; background:var(--cream); transition:transform .14s, box-shadow .14s; display:flex; flex-direction:column; gap:12px; min-height:150px; justify-content:center; }
 .related-grid a:hover{ transform:translate(-4px,-4px); box-shadow:8px 8px 0 var(--accent); }
 .related-grid .rl-cat{ font-size:12px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); }
-.related-grid .rl-title{ font-family:'Archivo',sans-serif; font-weight:800; font-size:18px; line-height:1.15; letter-spacing:-0.01em; }
+.related-grid .rl-title{ font-family:'Archivo',sans-serif; font-weight:800; font-size:19px; line-height:1.2; letter-spacing:-0.01em; }
 
 /* article CTA */
 .article-cta{ margin-top:52px; border:3px solid var(--ink); border-radius:22px; background:var(--accent); color:var(--cream); padding:clamp(28px,4vw,44px); text-align:center; box-shadow:8px 8px 0 var(--ink); }
