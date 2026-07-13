@@ -32,6 +32,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @keyframes ll-spin { to { transform:rotate(360deg); } }
   @keyframes ll-float { 0%,100%{ transform:translateY(0) rotate(-3deg); } 50%{ transform:translateY(-12px) rotate(-3deg); } }
   ::selection{ background:#FF3D97; color:#FFF9E9; }
+  #ll-rotate{ display:inline-block; transition:opacity .25s ease, transform .25s ease; }
+  #ll-rotate.out{ opacity:0; transform:translateY(0.35em); }
+  #ll-rotate.in{ opacity:0; transform:translateY(-0.35em); transition:none; }
+  @media (prefers-reduced-motion:reduce){ #ll-rotate, #ll-rotate.out, #ll-rotate.in{ transition:none; opacity:1; transform:none; } }
   input::placeholder, textarea::placeholder{ color:rgba(255,249,233,0.45); }
 </style>
 <style>
@@ -105,7 +109,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span style="width:8px; height:8px; border-radius:50%; background:var(--accent);"></span>Adelaide marketing studio
         </span>
         <h1 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(46px,7vw,104px); line-height:0.92; letter-spacing:-0.035em; margin:22px 0 0;">
-          We make your business <span style="color:var(--accent); font-style:italic;">impossible</span> to ignore
+          We make your <span id="ll-rotate">business</span> <span style="color:var(--accent); font-style:italic;">impossible</span> to ignore
         </h1>
         <p style="font-size:clamp(17px,1.5vw,21px); line-height:1.5; max-width:46ch; margin:26px 0 0; color:rgba(20,17,9,0.78);">
           <strong>lemonlolly</strong> is a small Adelaide studio doing brand, social, ads, web and content — mostly for businesses that sell experiences. If people book you, visit you, or walk out with a story to tell, we speak your language.
@@ -346,6 +350,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       alert('Network error. Please email indy@lemonlolly.com.au.');
     });
   });
+  // Hero: cycle the thing we make impossible to ignore
+  var rot = document.getElementById('ll-rotate');
+  if (rot && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var words = ['business','experience','brand','service','venue'];
+    var wi = 0;
+    setInterval(function(){
+      rot.classList.add('out');
+      setTimeout(function(){
+        wi = (wi + 1) % words.length;
+        rot.textContent = words[wi];
+        rot.classList.remove('out');
+        rot.classList.add('in');
+        void rot.offsetWidth;
+        rot.classList.remove('in');
+      }, 260);
+    }, 2600);
+  }
   // Services accordion (tap a category to expand its description)
   document.querySelectorAll('.ll-svc-head').forEach(function(btn){
     btn.addEventListener('click', function(){
