@@ -32,7 +32,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @keyframes ll-spin { to { transform:rotate(360deg); } }
   @keyframes ll-float { 0%,100%{ transform:translateY(0) rotate(-3deg); } 50%{ transform:translateY(-12px) rotate(-3deg); } }
   ::selection{ background:#FF3D97; color:#FFF9E9; }
-  #ll-rotate{ display:inline-block; transition:opacity .25s ease, transform .25s ease; }
+  #ll-rotate{ display:block; transition:opacity .25s ease, transform .25s ease; }
   #ll-rotate.out{ opacity:0; transform:translateY(0.35em); }
   #ll-rotate.in{ opacity:0; transform:translateY(-0.35em); transition:none; }
   @media (prefers-reduced-motion:reduce){ #ll-rotate, #ll-rotate.out, #ll-rotate.in{ transition:none; opacity:1; transform:none; } }
