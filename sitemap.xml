@@ -50,4 +50,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.lemonlolly.com.au/blog/do-you-still-need-a-blog-in-2026-yes-heres-why</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
