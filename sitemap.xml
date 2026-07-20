@@ -75,4 +75,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.lemonlolly.com.au/blog/when-should-you-hire-a-marketing-agency-vs-diy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
