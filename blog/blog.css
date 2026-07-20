@@ -222,3 +222,12 @@ img{ max-width:100%; display:block; }
   .blog-tools{ top:59px; }
   .ll-wrap, .blog-hero, .blog-tools, .featured, .posts, .subscribe, .article{ padding-left:18px; padding-right:18px; }
 }
+
+/* ---- tables in article body ---- */
+.prose table{ width:100%; border-collapse:separate; border-spacing:0; margin:6px 0 28px; font-size:16px; background:var(--cream); border:3px solid var(--ink); border-radius:14px; overflow:hidden; box-shadow:6px 6px 0 var(--ink); }
+.prose thead th{ background:var(--lemon); color:var(--ink); font-family:'Archivo',sans-serif; font-weight:800; font-size:12.5px; letter-spacing:0.07em; text-transform:uppercase; text-align:left; padding:14px 18px; border-bottom:3px solid var(--ink); }
+.prose tbody td{ padding:14px 18px; border-bottom:1px solid rgba(20,17,9,0.13); vertical-align:top; line-height:1.5; }
+.prose tbody tr:last-child td{ border-bottom:0; }
+.prose tbody tr:nth-child(even){ background:rgba(20,17,9,0.035); }
+.prose tbody td:first-child{ font-weight:600; }
+.prose tbody td:nth-child(2){ white-space:nowrap; color:var(--muted); }
