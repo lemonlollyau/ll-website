@@ -1,98 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.lemonlolly.com.au/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/instagram-content-ideas-local-business</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/google-business-profile-the-12-point-optimisation-checklist</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/how-to-get-more-google-reviews-without-being-annoying</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/website-speed-why-slow-pages-cost-adelaide-businesses-customers</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/what-makes-a-small-business-website-actually-convert</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/the-20-local-keywords-every-adelaide-service-business-should-target</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/suburb-pages-how-to-rank-across-adelaide-without-spamming-google</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/how-to-write-a-homepage-that-google-and-humans-both-love</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/do-you-still-need-a-blog-in-2026-yes-heres-why</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/meta-titles-and-descriptions-the-15-minute-seo-win</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/why-your-adelaide-business-isnt-showing-up-on-google-maps</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/local-seo-for-adelaide-businesses-the-complete-2026-guide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/how-to-rank-for-near-me-searches-in-adelaide</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/when-should-you-hire-a-marketing-agency-vs-diy</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/questions-to-ask-before-hiring-a-marketing-agency</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/how-to-brief-a-designer-writer-or-agency-properly</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.lemonlolly.com.au/blog/how-to-set-up-google-search-console-and-what-to-check-weekly</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+<url>
+<loc>https://www.lemonlolly.com.au/</loc>
+<changefreq>monthly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog</loc>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/instagram-content-ideas-local-business</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/google-business-profile-the-12-point-optimisation-checklist</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/how-to-get-more-google-reviews-without-being-annoying</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/website-speed-why-slow-pages-cost-adelaide-businesses-customers</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/what-makes-a-small-business-website-actually-convert</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/the-20-local-keywords-every-adelaide-service-business-should-target</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/suburb-pages-how-to-rank-across-adelaide-without-spamming-google</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/how-to-write-a-homepage-that-google-and-humans-both-love</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/do-you-still-need-a-blog-in-2026-yes-heres-why</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/meta-titles-and-descriptions-the-15-minute-seo-win</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/why-your-adelaide-business-isnt-showing-up-on-google-maps</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/local-seo-for-adelaide-businesses-the-complete-2026-guide</loc>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/how-to-rank-for-near-me-searches-in-adelaide</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/when-should-you-hire-a-marketing-agency-vs-diy</loc>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/questions-to-ask-before-hiring-a-marketing-agency</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/how-to-brief-a-designer-writer-or-agency-properly</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/how-to-set-up-google-search-console-and-what-to-check-weekly</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/schema-markup-for-local-businesses-explained-simply</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 </urlset>
