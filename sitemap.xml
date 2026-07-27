@@ -68,7 +68,7 @@
 <url>
 <loc>https://www.lemonlolly.com.au/blog/local-seo-for-adelaide-businesses-the-complete-2026-guide</loc>
 <changefreq>monthly</changefreq>
-<priority>0.8</priority>
+<priority>0.7</priority>
 </url>
 <url>
 <loc>https://www.lemonlolly.com.au/blog/how-to-rank-for-near-me-searches-in-adelaide</loc>
@@ -78,7 +78,7 @@
 <url>
 <loc>https://www.lemonlolly.com.au/blog/when-should-you-hire-a-marketing-agency-vs-diy</loc>
 <changefreq>monthly</changefreq>
-<priority>0.8</priority>
+<priority>0.7</priority>
 </url>
 <url>
 <loc>https://www.lemonlolly.com.au/blog/questions-to-ask-before-hiring-a-marketing-agency</loc>
@@ -107,6 +107,11 @@
 </url>
 <url>
 <loc>https://www.lemonlolly.com.au/blog/how-to-do-keyword-research-for-a-local-business-in-an-afternoon</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/backlinks-for-small-businesses-the-honest-doable-version</loc>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
