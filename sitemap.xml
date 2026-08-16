@@ -185,4 +185,9 @@
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/how-to-design-a-logo-brief-even-if-you-cant-draw</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 </urlset>
