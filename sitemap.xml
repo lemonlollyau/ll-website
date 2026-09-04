@@ -290,4 +290,9 @@
 <changefreq>monthly</changefreq>
 <priority>0.9</priority>
 </url>
+<url>
+<loc>https://www.lemonlolly.com.au/blog/how-to-write-a-facebook-ad-that-actually-gets-clicks</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 </urlset>
