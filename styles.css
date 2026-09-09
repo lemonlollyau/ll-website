@@ -97,9 +97,9 @@ section{border-bottom:3px solid var(--ink);padding:clamp(56px,7vw,104px) 0}
 .s-ink h1,.s-ink h2,.s-ink h3,.s-ink h4,section.dark h2,section.dark h3,section.dark h4{color:var(--cream)}
 .s-ink .card,section.dark .card{background:#1f1a10;border-color:var(--cream);color:var(--cream);box-shadow:6px 6px 0 rgba(255,249,233,.22)}
 .s-ink .card:hover,section.dark .card:hover{box-shadow:9px 9px 0 var(--accent)}
-.s-ink .sub,.s-ink p{color:rgba(255,249,233,.82)}
+.s-ink .sub,section.dark .sub{color:rgba(255,249,233,.82)}
 .s-ink .card p,section.dark .card p{color:rgba(255,249,233,.82)}
-section.dark .sub,section.dark > .wrap > p{color:rgba(255,249,233,.82)}
+.s-ink .note,.s-ink .note p,.s-ink .note strong,section.dark .note,section.dark .note p,section.dark .note strong{color:var(--ink)}
 
 .s-ink .eyebrow{color:var(--accent)}
 
