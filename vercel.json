@@ -1,4 +1,16 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/christmas-revenue-playbook",
+      "destination": "https://lemonindy6.gumroad.com/l/christmas-revenue-playbook",
+      "permanent": true
+    },
+    {
+      "source": "/christmas-revenue-playbook/",
+      "destination": "https://lemonindy6.gumroad.com/l/christmas-revenue-playbook",
+      "permanent": true
+    }
+  ]
 }
