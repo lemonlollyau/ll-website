@@ -11,6 +11,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MF78V8DS');</script>
 <!-- End Google Tag Manager -->
+<!-- Google Ads tag (AW-18373661137) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18373661137"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18373661137');
+</script>
+<!-- Event snippet for Sign-up conversion page.
+     Called after a form is successfully submitted (not on click), so failed sends aren't counted. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18373661137/D-HdCK7_rPocENGjn7lE',
+      'value': 1.0,
+      'currency': 'AUD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 <title>lemonlolly — Adelaide Marketing Studio | Brand, Social, Ads &amp; Web</title>
 <meta name="description" content="lemonlolly is a small Adelaide marketing studio for ecommerce and service businesses. Brand, social, ads, web and content — marketing is marketing.">
 <link rel="canonical" href="https://www.lemonlolly.com.au/">
@@ -342,6 +368,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       if (r.ok){
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({ event: 'generate_lead', form_name: 'contact_form' });
+        if (typeof gtag_report_conversion === 'function') gtag_report_conversion();
         form.innerHTML = '<div style="padding:26px; border:2px solid var(--lemon); border-radius:14px; text-align:center;"><strong style="font-family:Archivo,sans-serif; font-weight:900; font-size:27px; letter-spacing:-0.02em; color:var(--lemon);">Sweet &mdash; message sent!</strong><br><span style="color:rgba(255,249,233,0.75);">We&rsquo;ll be back to you within a day &mdash; usually a whole lot sooner.</span></div>';
       } else {
         r.json().then(function(d){
