@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klaviyo Setup &amp; Email Flows for Shopify | lemonlolly</title>
+<meta name="description" content="Get your Shopify email system ready before Black Friday and Christmas. lemonlolly builds and rebuilds branded Klaviyo flows including welcome, abandoned cart, browse, post-purchase and winback.">
+<link rel="canonical" href="https://www.lemonlolly.com.au/klaviyo-shopify">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Get your Klaviyo ready before the Christmas rush | lemonlolly">
+<meta property="og:description" content="Audit, rebuild, branded emails, automated flows and your Christmas campaign sequence. One-off build for Shopify brands. No retainer.">
+<meta property="og:url" content="https://lemonlolly.com.au/klaviyo-shopify">
+<meta property="og:image" content="https://www.lemonlolly.com.au/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFE100">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Google Tag Manager — same container as the main site -->
+<script>
+  window.LL_GTM_ID = "GTM-MF78V8DS";
+  window.dataLayer = window.dataLayer || [];
+  (function(w,d,s,i){ if(!i || i.indexOf("XXXX")>-1) return;
+    w.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;
+    j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);
+  })(window,document,'script',window.LL_GTM_ID);
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Shopify Klaviyo Setup & Christmas Revenue Rebuild",
+  "provider": {"@type": "Organization", "name": "lemonlolly", "url": "https://www.lemonlolly.com.au", "telephone": "+61875231012", "email": "hello@lemonlolly.com.au", "address": {"@type": "PostalAddress", "addressLocality": "Adelaide", "addressRegion": "SA", "addressCountry": "AU"}},
+  "serviceType": "Klaviyo email marketing implementation for Shopify",
+  "areaServed": "AU",
+  "offers": [
+    {"@type": "Offer", "name": "Shopify Klaviyo Setup", "price": "1495", "priceCurrency": "AUD", "description": "One-off Klaviyo implementation for Shopify brands starting from scratch. Price excludes GST."},
+    {"@type": "Offer", "name": "Klaviyo Christmas Revenue Rebuild", "price": "1950", "priceCurrency": "AUD", "description": "Audit and rebuild of an existing Klaviyo account, including a Christmas and BFCM campaign sequence. Price excludes GST."}
+  ]
+}
+</script>
+
+<style>
+:root{
+  --lemon:#FFE100; --pink:#FF3D97; --ink:#141109; --cream:#FFF9E9; --white:#FFFFFF;
+  --ink-soft:#3b3526;
+  --bw:3px;
+  --shadow:6px 6px 0 var(--ink);
+  --shadow-lg:10px 10px 0 var(--ink);
+  --radius:18px;
+  --display:"Archivo","Archivo Black",system-ui,sans-serif;
+  --body:"Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --wrap:1180px;
+  --gutter:clamp(16px,4vw,40px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.55;overflow-x:hidden}
+body::before{ /* paper grain */
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--lemon);padding:10px 16px;border-radius:999px;z-index:200}
+.skip:focus{left:8px}
+
+/* type */
+h1,h2,h3,.display{font-family:var(--display);font-weight:900;letter-spacing:-.04em;line-height:.95;margin:0}
+h1{font-size:clamp(44px,7.4vw,96px)}
+h2{font-size:clamp(36px,5.4vw,68px)}
+h3{font-size:clamp(22px,2.4vw,30px);letter-spacing:-.03em;line-height:1.02}
+.sub{display:block;font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.02;font-size:clamp(24px,3vw,38px);margin-top:.35em}
+p{margin:0 0 .9em}
+.lead{font-size:clamp(19px,1.7vw,22px);max-width:36em}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:14px;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:var(--lemon);padding:7px 14px;border-radius:999px;margin-bottom:22px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--pink)}
+.hl{background:var(--lemon);padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.pinkdot{color:var(--pink)}
+section{position:relative}
+.sec{padding:clamp(72px,10vw,130px) 0}
+.sec-head{max-width:820px;margin-bottom:clamp(36px,5vw,60px)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:14px 26px;border:var(--bw) solid var(--ink);border-radius:999px;font-family:var(--body);font-weight:700;font-size:17px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;cursor:pointer;--bs:var(--ink);box-shadow:6px 6px 0 var(--bs);transition:transform .12s ease,box-shadow .12s ease;text-align:center;line-height:1.15}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--bs)}
+.btn:active{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--bs)}
+.btn-ink{background:var(--ink);color:var(--lemon);--bs:var(--pink)}
+/* buttons sitting on dark panels get a light shadow so it stays visible */
+.pkg.feature .btn,.enquiry .btn,.get .btn{--bs:var(--lemon)}
+.btn-lemon{background:var(--lemon);color:var(--ink)}
+.btn-pink{background:var(--pink);color:var(--ink)}
+.btn-cream{background:var(--cream);color:var(--ink)}
+.btn .arr{transition:transform .15s}
+.btn:hover .arr{transform:translateX(4px)}
+.btn-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+.micro{font-size:15px;font-weight:500;margin-top:18px;display:flex;align-items:center;gap:8px}
+.micro::before{content:"✓";display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--lemon);font-size:12px;font-weight:700;flex:none}
+
+/* header */
+.site-head{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:var(--bw) solid var(--ink)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
+.wordmark{font-family:var(--display);font-weight:900;font-size:30px;letter-spacing:-.05em;text-decoration:none;line-height:1}
+.wordmark .pinkdot{font-size:1.1em}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a:not(.btn){text-decoration:none;font-weight:500;font-size:16px}
+.nav a:not(.btn):hover{text-decoration:underline;text-decoration-thickness:3px;text-decoration-color:var(--pink);text-underline-offset:5px}
+.nav .btn{min-height:44px;padding:8px 18px;font-size:14px;box-shadow:4px 4px 0 var(--bs)}
+@media (max-width:820px){.nav a:not(.btn){display:none}}
+@media (max-width:420px){.nav .btn .long{display:none}.wordmark{font-size:26px}}
+
+/* hero */
+.hero{background:var(--lemon);border-bottom:var(--bw) solid var(--ink);padding:clamp(48px,7vw,96px) 0 clamp(64px,8vw,110px);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,70px);align-items:center}
+.hero h1{margin-bottom:.1em}
+.hero .sub{margin-bottom:28px;max-width:16em}
+.hero .lead{margin-bottom:30px}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr}}
+
+/* journey visual */
+.journey{position:relative;background:var(--cream);border:var(--bw) solid var(--ink);border-radius:26px;box-shadow:var(--shadow-lg);padding:26px 22px 22px}
+.journey-title{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:8px 12px;padding-right:84px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+.live{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:var(--lemon);padding:4px 10px;border-radius:999px}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--pink);animation:pulse 1.4s infinite}
+@keyframes pulse{50%{opacity:.25}}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:10px;counter-reset:s}
+.step{display:grid;grid-template-columns:38px 1fr auto;align-items:center;gap:12px;counter-increment:s}
+.step .dot{width:38px;height:38px;border-radius:50%;border:var(--bw) solid var(--ink);background:var(--white);display:grid;place-items:center;font-weight:700;font-size:14px}
+.step .dot::before{content:counter(s)}
+.step .lbl{font-family:var(--display);font-weight:900;font-size:clamp(15px,1.5vw,18px);letter-spacing:-.02em;text-transform:uppercase}
+.mail{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:2px solid var(--ink);border-radius:10px;padding:6px 10px;font-size:13px;font-weight:700;box-shadow:3px 3px 0 var(--ink);white-space:nowrap;animation:fire .7s cubic-bezier(.2,1.4,.4,1) both}
+.mail::before{content:"";width:18px;height:13px;flex:none;border:2px solid var(--ink);border-radius:2px;background:linear-gradient(155deg,transparent 45%,var(--ink) 46% 54%,transparent 55%),linear-gradient(25deg,transparent 45%,var(--ink) 46% 54%,transparent 55%);background-size:100% 200%;background-position:top}
+.mail.p{background:var(--pink)}
+.mail.y{background:var(--lemon)}
+.step:nth-child(1) .mail{animation-delay:.4s}
+.step:nth-child(2) .mail{animation-delay:.9s}
+.step:nth-child(3) .mail{animation-delay:1.4s}
+.step:nth-child(4) .mail{animation-delay:1.9s}
+.step:nth-child(5) .mail{animation-delay:2.4s}
+.step:nth-child(6) .mail{animation-delay:2.9s}
+@keyframes fire{from{opacity:0;transform:translateX(-14px) scale(.9)}to{opacity:1;transform:none}}
+.connector{height:12px;margin-left:18px;border-left:var(--bw) dashed var(--ink)}
+.step-line{list-style:none}
+.seal{position:absolute;right:-34px;top:-62px;z-index:2;width:118px;height:118px;border-radius:50%;background:var(--pink);border:var(--bw) solid var(--ink);display:grid;place-items:center;box-shadow:4px 4px 0 var(--ink)}
+.seal svg{position:absolute;inset:6px;width:calc(100% - 12px);height:calc(100% - 12px);animation:spin 18s linear infinite}
+.seal b{font-family:var(--display);font-size:26px;line-height:1}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (max-width:520px){
+  .journey-title{padding-right:70px}
+  .seal{width:92px;height:92px;right:-8px;top:-58px}
+  .seal b{font-size:20px}
+  .step{grid-template-columns:32px 1fr}
+  .step .dot{width:32px;height:32px}
+  .step .mail{grid-column:2;justify-self:start;margin-top:2px}
+}
+
+/* stripe ticker */
+.ticker{background:var(--ink);color:var(--lemon);border-bottom:var(--bw) solid var(--ink);overflow:hidden;padding:16px 0}
+.ticker-track{display:flex;gap:36px;width:max-content;animation:tick 32s linear infinite}
+.ticker span{font-family:var(--display);font-weight:900;font-size:clamp(20px,2.4vw,28px);letter-spacing:-.02em;text-transform:uppercase;white-space:nowrap;display:flex;align-items:center;gap:36px}
+.ticker span::after{content:"✳";color:var(--pink)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* problem */
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
+.problem-copy p{font-size:clamp(18px,1.6vw,21px)}
+.problem-copy .beat{font-family:var(--display);font-weight:900;font-size:clamp(22px,2.3vw,28px);letter-spacing:-.02em;margin:.2em 0}
+.flow{display:grid;gap:14px;justify-items:center;text-align:center}
+.node{border:var(--bw) solid var(--ink);border-radius:14px;padding:14px 18px;font-family:var(--display);font-weight:900;letter-spacing:-.01em;text-transform:uppercase;background:var(--white);box-shadow:var(--shadow);width:100%;max-width:360px}
+.node.money{background:var(--lemon);font-size:34px;width:auto;border-radius:999px;padding:6px 26px}
+.down{width:0;height:26px;border-left:var(--bw) solid var(--ink);position:relative}
+.down::after{content:"";position:absolute;bottom:-4px;left:-8px;border:7px solid transparent;border-top:10px solid var(--ink)}
+.split{display:grid;grid-template-columns:1fr 1.35fr;gap:16px;width:100%;max-width:460px;align-items:stretch}
+.path{border:var(--bw) solid var(--ink);border-radius:14px;padding:16px 12px;display:grid;gap:6px;place-content:center}
+.path strong{font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:1}
+.path .icon{font-family:var(--display);font-size:40px;line-height:1}
+.path.buy{background:var(--white);opacity:.75}
+.path.nobuy{background:var(--pink);box-shadow:var(--shadow-lg);transform:rotate(-2deg)}
+.path.nobuy strong{font-size:22px}
+.path.nobuy .icon{font-size:64px}
+.flow-note{font-weight:700;font-size:18px;margin-top:6px;background:var(--ink);color:var(--lemon);padding:8px 16px;border-radius:999px}
+@media (max-width:860px){.problem-grid{grid-template-columns:1fr}}
+
+/* what you get */
+.get{background:var(--ink);color:var(--cream)}
+.get h2{color:var(--cream)}
+.get .eyebrow{background:var(--lemon);color:var(--ink)}
+.get-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.get-card{background:var(--cream);color:var(--ink);border:var(--bw) solid var(--cream);border-radius:var(--radius);padding:26px 24px;box-shadow:6px 6px 0 var(--lemon)}
+.get-card:nth-child(3n+2){box-shadow:6px 6px 0 var(--pink)}
+.get-card .num{font-family:var(--display);font-weight:900;font-size:15px;display:inline-block;background:var(--lemon);border:2px solid var(--ink);border-radius:999px;padding:3px 12px;margin-bottom:16px}
+.get-card h3{margin-bottom:10px}
+.get-card p{margin:0;font-size:17px}
+@media (max-width:900px){.get-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.get-grid{grid-template-columns:1fr}}
+
+/* diagnostic */
+.diag-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.diag{border:var(--bw) solid var(--ink);border-radius:26px;padding:clamp(26px,3vw,40px);box-shadow:var(--shadow-lg);display:flex;flex-direction:column}
+.diag.a{background:var(--white)}
+.diag.b{background:var(--lemon)}
+.diag .tag{width:64px;height:64px;border-radius:50%;border:var(--bw) solid var(--ink);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:32px;margin-bottom:22px;background:var(--pink)}
+.diag.b .tag{background:var(--ink);color:var(--lemon)}
+.diag h3{font-size:clamp(26px,2.8vw,36px);margin-bottom:18px}
+.diag p{margin-bottom:.5em}
+.diag .kicker{font-weight:700;margin-top:.4em}
+.diag .btn{margin-top:auto;align-self:flex-start}
+.diag .spacer{flex:1;min-height:20px}
+@media (max-width:820px){.diag-grid{grid-template-columns:1fr}}
+
+/* packages */
+.packages{background:var(--cream);border-top:var(--bw) solid var(--ink);background-image:repeating-linear-gradient(45deg,rgba(255,225,0,.35) 0 18px,transparent 18px 36px)}
+.pkg-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:32px;align-items:start}
+.pkg{background:var(--white);border:var(--bw) solid var(--ink);border-radius:28px;box-shadow:var(--shadow-lg);overflow:hidden}
+.pkg-top{padding:clamp(26px,3vw,40px);border-bottom:var(--bw) solid var(--ink)}
+.pkg.feature{background:var(--ink);color:var(--cream);box-shadow:12px 12px 0 var(--pink)}
+.pkg.feature .pkg-top{background:var(--lemon);color:var(--ink)}
+.badge{display:inline-block;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;border:2px solid var(--ink);border-radius:999px;padding:5px 12px;margin-bottom:18px;background:var(--cream)}
+.pkg.feature .badge{background:var(--pink)}
+.pkg h2{font-size:clamp(32px,3.6vw,48px)}
+.pkg .sub{font-size:clamp(20px,2vw,26px)}
+.price{display:flex;align-items:baseline;gap:10px;margin:22px 0 10px;flex-wrap:wrap}
+.price b{font-family:var(--display);font-weight:900;font-size:clamp(52px,6vw,76px);letter-spacing:-.05em;line-height:.9}
+.price span{font-weight:700}
+.pkg-top p{margin:0}
+.pkg-body{padding:clamp(24px,3vw,40px)}
+.pkg-body h4{margin:0 0 14px;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+.incl{list-style:none;margin:0 0 26px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+.incl li{position:relative;padding-left:30px;font-size:16px;line-height:1.35}
+.incl li::before{content:"✓";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--lemon);border:2px solid var(--ink);color:var(--ink);font-size:11px;font-weight:700;display:grid;place-items:center}
+.pkg.feature .incl li::before{border-color:var(--lemon)}
+@media (max-width:560px){.incl{grid-template-columns:1fr}}
+.xmas-box{border:var(--bw) solid var(--pink);border-radius:18px;padding:20px;margin:0 0 26px;background:rgba(255,61,151,.1)}
+.xmas-box h4{color:var(--pink);display:flex;align-items:center;gap:8px}
+.xmas-box ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.xmas-box li{background:var(--pink);color:var(--ink);font-weight:700;font-size:14px;border-radius:999px;padding:5px 12px}
+.xmas-box p{font-size:15px;margin:12px 0 0}
+.callout{border:var(--bw) dashed var(--ink);border-radius:16px;padding:18px 20px;margin-bottom:26px;background:var(--cream)}
+.callout strong{font-family:var(--display);font-weight:900;font-size:22px;letter-spacing:-.02em;display:block;margin-bottom:6px}
+.callout p{margin:0;font-size:16px}
+.pkg .btn{width:100%}
+.pkg-note{font-size:14px;margin:14px 0 0;text-align:center;opacity:.85}
+@media (max-width:960px){.pkg-grid{grid-template-columns:1fr}.pkg.feature{order:-1}}
+
+/* timeline */
+.timeline{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;position:relative}
+.timeline::before{content:"";position:absolute;left:0;right:0;top:34px;border-top:var(--bw) dashed var(--ink);z-index:0}
+.tl{position:relative;z-index:1}
+.tl .pill{display:inline-block;font-family:var(--display);font-weight:900;font-size:15px;letter-spacing:.02em;border:var(--bw) solid var(--ink);border-radius:999px;padding:18px 16px;background:var(--lemon);box-shadow:4px 4px 0 var(--ink);margin-bottom:20px}
+.tl:nth-child(even) .pill{background:var(--pink)}
+.tl h3{font-size:clamp(20px,1.9vw,24px);margin-bottom:10px}
+.tl p{font-size:16px;margin:0}
+.tl .when{display:block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;opacity:.7}
+@media (max-width:980px){
+  .timeline{grid-template-columns:1fr;gap:0;padding-left:30px}
+  .timeline::before{left:12px;right:auto;top:10px;bottom:10px;border-top:0;border-left:var(--bw) dashed var(--ink)}
+  .tl{padding:0 0 28px}
+  .tl::before{content:"";position:absolute;left:-26px;top:20px;width:16px;height:16px;border-radius:50%;background:var(--ink)}
+  .tl .pill{padding:8px 16px;margin-bottom:12px}
+}
+.xmas-lane{margin-top:44px;border:var(--bw) solid var(--ink);border-radius:26px;background:var(--ink);color:var(--cream);padding:clamp(24px,3vw,40px);box-shadow:var(--shadow-lg)}
+.xmas-lane .top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 30px;align-items:end;margin-bottom:26px}
+.xmas-lane h3{color:var(--lemon);font-size:clamp(26px,3vw,40px)}
+.xmas-lane .top p{margin:0;max-width:30em}
+.xm{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.xm li{background:var(--cream);color:var(--ink);border-radius:14px;padding:16px 14px;border:2px solid var(--cream)}
+.xm li:nth-child(odd){background:var(--lemon)}
+.xm b{display:block;font-family:var(--display);font-weight:900;font-size:17px;letter-spacing:-.02em;line-height:1.05;margin-bottom:6px}
+.xm span{font-size:14px;line-height:1.35;display:block}
+@media (max-width:1000px){.xm{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.xm{grid-template-columns:1fr 1fr}}
+.arc{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 14px;margin-top:48px;font-family:var(--display);font-weight:900;font-size:clamp(22px,3.4vw,44px);letter-spacing:-.03em}
+.arc i{font-style:normal;color:var(--pink)}
+
+/* before / after */
+.ba{background:var(--lemon);border-top:var(--bw) solid var(--ink);border-bottom:var(--bw) solid var(--ink)}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.ba-col{display:grid;grid-template-columns:1fr;gap:22px}
+.ba-label{display:inline-flex;align-self:start;justify-self:start;font-family:var(--display);font-weight:900;font-size:22px;text-transform:uppercase;border:var(--bw) solid var(--ink);border-radius:999px;padding:6px 18px;background:var(--white)}
+.after .ba-label{background:var(--pink)}
+.ba-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ba-list li{display:flex;gap:10px;align-items:flex-start;font-weight:500}
+.ba-list li::before{flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:700;border:2px solid var(--ink)}
+.before .ba-list li::before{content:"✕";background:var(--white)}
+.after .ba-list li::before{content:"✓";background:var(--ink);color:var(--lemon)}
+.phone{border:var(--bw) solid var(--ink);border-radius:26px;background:var(--ink);padding:12px;box-shadow:var(--shadow-lg);max-width:340px;width:100%;justify-self:center}
+.screen{border-radius:16px;overflow:hidden;background:#fff;font-size:13px;line-height:1.35}
+.before .phone{transform:rotate(-2deg)}
+.after .phone{transform:rotate(2deg)}
+/* before email */
+.e-old{font-family:"Times New Roman",Times,serif;color:#333;padding:14px}
+.e-old .logo{font-size:12px;color:#888;text-align:left;margin-bottom:10px}
+.e-old .img{height:92px;background:#d9d9d9;display:grid;place-items:center;color:#777;font-family:Arial,sans-serif;font-size:11px;margin-bottom:10px}
+.e-old h5{font-size:17px;margin:0 0 6px;font-weight:700;color:#000}
+.e-old p{font-size:12px;margin:0 0 8px}
+.e-old .code{font-family:Arial,sans-serif;border:1px dashed #999;padding:6px;text-align:center;font-size:12px;margin-bottom:8px}
+.e-old a{color:#00e;font-size:12px}
+.e-old .foot{font-size:9px;color:#aaa;margin-top:12px}
+/* after email (fictional brand) */
+.e-new{font-family:var(--body);color:#1f2a24;background:#F4EFE6}
+.e-new .bar{background:#1F3D33;color:#F4EFE6;padding:12px 14px;display:flex;justify-content:space-between;align-items:center}
+.e-new .bar b{font-family:Georgia,serif;font-style:italic;font-size:18px;letter-spacing:.01em}
+.e-new .bar span{font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.e-new .heroimg{height:110px;background:radial-gradient(circle at 70% 60%,#E8A87C 0 22px,transparent 23px),radial-gradient(circle at 36% 48%,#C9D6C0 0 30px,transparent 31px),linear-gradient(160deg,#D8C8B0,#BFA98A);position:relative}
+.e-new .heroimg::after{content:"Still thinking it over?";position:absolute;left:14px;bottom:10px;font-family:Georgia,serif;font-size:19px;color:#1F3D33;font-weight:700}
+.e-new .body{padding:14px}
+.e-new p{font-size:12px;margin:0 0 10px}
+.e-new .prod{display:flex;gap:10px;align-items:center;background:#fff;border-radius:10px;padding:8px;margin-bottom:10px}
+.e-new .thumb{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#C9D6C0,#8FA88A);flex:none}
+.e-new .prod b{display:block;font-size:12px}
+.e-new .prod small{font-size:11px;color:#5a6b61}
+.e-new .cta{display:block;text-align:center;background:#1F3D33;color:#F4EFE6;border-radius:999px;padding:9px;font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.e-new .usp{display:flex;justify-content:space-between;font-size:9.5px;color:#5a6b61;margin-top:10px;gap:6px}
+.fict{font-size:13px;text-align:center;margin:0;font-weight:500}
+@media (max-width:820px){.ba-grid{grid-template-columns:1fr}}
+
+/* why now */
+.why{background:var(--pink);border-bottom:var(--bw) solid var(--ink);overflow:hidden}
+.why-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(32px,5vw,70px);align-items:center}
+.why h2{font-size:clamp(34px,4.8vw,62px)}
+.why .eyebrow{background:var(--ink);color:var(--pink)}
+.why .eyebrow::before{background:var(--lemon)}
+.why-steps{display:grid;gap:14px}
+.why-steps div{background:var(--cream);border:var(--bw) solid var(--ink);border-radius:18px;padding:16px 20px;box-shadow:var(--shadow);font-family:var(--display);font-weight:900;font-size:clamp(24px,2.6vw,34px);letter-spacing:-.03em;display:flex;align-items:center;gap:14px}
+.why-steps div:nth-child(2){margin-left:24px;background:var(--lemon)}
+.why-steps div:nth-child(3){margin-left:48px;background:var(--ink);color:var(--lemon)}
+.why-steps em{font-style:normal;font-size:15px;font-family:var(--body);font-weight:700;border:2px solid currentColor;border-radius:999px;padding:2px 10px}
+.limited{display:inline-block;margin-top:14px;background:var(--ink);color:var(--cream);padding:12px 18px;border-radius:14px;font-weight:700}
+@media (max-width:900px){.why-grid{grid-template-columns:1fr}.why-steps div:nth-child(2){margin-left:12px}.why-steps div:nth-child(3){margin-left:24px}}
+
+/* process */
+.proc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.proc li{background:var(--white);border:var(--bw) solid var(--ink);border-radius:var(--radius);padding:26px 22px;box-shadow:var(--shadow)}
+.proc .n{font-family:var(--display);font-weight:900;font-size:56px;letter-spacing:-.05em;line-height:.9;color:var(--pink);-webkit-text-stroke:2px var(--ink);display:block;margin-bottom:10px}
+.proc h3{font-size:22px;text-transform:uppercase;margin-bottom:10px}
+.proc p{margin:0;font-size:16px}
+.proc-after{margin-top:34px;font-family:var(--display);font-weight:900;font-size:clamp(22px,2.6vw,32px);letter-spacing:-.03em;max-width:24em}
+@media (max-width:980px){.proc{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.proc{grid-template-columns:1fr}}
+
+/* fit */
+.fit{background:var(--ink);color:var(--cream);border-top:var(--bw) solid var(--ink)}
+.fit h2{color:var(--cream)}
+.fit-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+.fit-card{border-radius:24px;padding:clamp(24px,3vw,38px);border:var(--bw) solid var(--cream)}
+.fit-card.yes{background:var(--lemon);color:var(--ink)}
+.fit-card.no{background:transparent}
+.fit-card h3{margin-bottom:18px}
+.fit-card ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.fit-card li{display:flex;gap:12px;align-items:flex-start;font-size:17px}
+.fit-card li::before{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:13px}
+.fit-card.yes li::before{content:"✓";background:var(--ink);color:var(--lemon)}
+.fit-card.no li::before{content:"✕";background:var(--pink);color:var(--ink)}
+.fit-card.no .wink{margin:18px 0 0;font-size:15px;opacity:.85}
+@media (max-width:860px){.fit-grid{grid-template-columns:1fr}}
+
+/* forms */
+.form-sec{background:var(--cream)}
+.form-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,5vw,70px);align-items:start}
+.form-copy .nope{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px}
+.form-copy .nope li{font-family:var(--display);font-weight:900;font-size:22px;letter-spacing:-.02em}
+.form-copy .nope li:last-child{background:var(--lemon);justify-self:start;padding:2px 10px;border-radius:8px}
+.card-form{background:var(--white);border:var(--bw) solid var(--ink);border-radius:26px;padding:clamp(22px,3vw,36px);box-shadow:var(--shadow-lg)}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:grid;gap:6px}
+.field.full{grid-column:1/-1}
+label,.legend{font-weight:700;font-size:15px}
+.opt{font-weight:400;opacity:.7}
+input,select,textarea{font:inherit;font-size:17px;width:100%;min-height:52px;padding:12px 14px;border:var(--bw) solid var(--ink);border-radius:12px;background:var(--cream);color:var(--ink)}
+textarea{min-height:110px;resize:vertical}
+select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ink) 50%),linear-gradient(135deg,var(--ink) 50%,transparent 50%);background-position:calc(100% - 22px) 50%,calc(100% - 16px) 50%;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+input:focus,select:focus,textarea:focus{outline:none;background:var(--white);box-shadow:4px 4px 0 var(--pink)}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip span{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border:var(--bw) solid var(--ink);border-radius:999px;font-weight:500;font-size:15px;cursor:pointer;background:var(--cream);transition:background .1s}
+.chip input:checked + span{background:var(--lemon);font-weight:700;box-shadow:3px 3px 0 var(--ink)}
+.chip input:checked + span::before{content:"✓ "}
+.chip input:focus-visible + span{outline:3px solid var(--pink);outline-offset:2px}
+.form-actions{margin-top:24px}
+.form-actions .btn{width:100%}
+.form-small{font-size:14px;margin:12px 0 0;opacity:.8;text-align:center}
+.form-error{display:none;margin-top:12px;font-weight:700;color:#b0005a}
+.success{display:none;text-align:center;padding:36px 10px}
+.success .big{width:84px;height:84px;margin:0 auto 18px;border-radius:50%;background:var(--lemon);border:var(--bw) solid var(--ink);display:grid;place-items:center;font-size:40px;box-shadow:var(--shadow)}
+.success h3{margin-bottom:10px}
+.is-sent .fields,.is-sent .form-actions,.is-sent .form-head{display:none}
+.is-sent .success{display:block}
+@media (max-width:900px){.form-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.fields{grid-template-columns:1fr}}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,5vw,70px);align-items:start}
+.faq details{border:var(--bw) solid var(--ink);border-radius:16px;background:var(--white);margin-bottom:12px;overflow:hidden}
+.faq details[open]{box-shadow:var(--shadow)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 58px 18px 20px;font-weight:700;font-size:18px;position:relative;min-height:56px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:14px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background:var(--lemon);border:2px solid var(--ink);display:grid;place-items:center;font-size:22px;line-height:1}
+.faq details[open] summary::after{content:"–";background:var(--pink)}
+.faq details[open] summary{border-bottom:2px solid var(--ink)}
+.faq .ans{padding:16px 20px 18px}
+.faq .ans p{margin:0;font-size:17px}
+@media (max-width:900px){.faq-grid{grid-template-columns:1fr}}
+
+/* final */
+.final{background:var(--lemon);border-top:var(--bw) solid var(--ink);text-align:center;overflow:hidden}
+.final h2{font-size:clamp(46px,8.4vw,120px)}
+.final .sub{font-size:clamp(28px,4.4vw,58px);margin-bottom:28px}
+.final .lead{margin:0 auto 34px}
+.final .btn-row{justify-content:center}
+.final .micro{justify-content:center}
+.final .stripe{height:26px;margin-top:70px;border-top:var(--bw) solid var(--ink);border-bottom:var(--bw) solid var(--ink);background:repeating-linear-gradient(45deg,var(--ink) 0 14px,var(--lemon) 14px 28px)}
+.enquiry{background:var(--ink);padding:clamp(72px,9vw,120px) 0}
+.enquiry .form-copy{color:var(--cream)}
+.enquiry .form-copy h2{color:var(--cream)}
+.enquiry .card-form{box-shadow:12px 12px 0 var(--pink);border-color:var(--cream)}
+.pkg-pick{display:grid;gap:10px;margin-top:8px}
+.pkg-pick .chip span{width:100%;justify-content:space-between;border-radius:14px;min-height:54px}
+.pkg-pick .chip{display:block;position:relative}
+.enquiry .contact{margin-top:26px;font-size:16px}
+.enquiry .contact a{color:var(--lemon)}
+
+/* footer */
+.site-foot{background:var(--ink);color:var(--cream);border-top:2px solid rgba(255,249,233,.2);padding:52px 0 110px}
+.site-foot .wordmark{color:var(--lemon);font-size:30px}
+.site-foot p{margin:14px 0 0;font-size:14px;color:rgba(255,249,233,.72)}
+.site-foot a{color:var(--lemon)}
+.site-foot .flinks{margin-top:22px;display:flex;gap:12px 24px;flex-wrap:wrap;font-size:14px;font-weight:600}
+.site-foot .legal{margin-top:26px;font-size:13px}
+
+/* testimonial */
+.proof{padding:clamp(56px,8vw,100px) 0;border-top:var(--bw) solid var(--ink)}
+.quote{position:relative;margin:0 auto;max-width:980px;background:var(--white);border:var(--bw) solid var(--ink);border-radius:28px;box-shadow:12px 12px 0 var(--pink);padding:clamp(40px,6vw,72px) clamp(24px,5vw,64px) clamp(28px,4vw,48px)}
+.quote .mark{position:absolute;top:-38px;left:clamp(20px,4vw,48px);width:76px;height:76px;border-radius:50%;background:var(--lemon);border:var(--bw) solid var(--ink);display:grid;place-items:center;font-family:var(--display);font-weight:900;font-size:64px;line-height:1;padding-top:22px;box-shadow:4px 4px 0 var(--ink)}
+.quote blockquote{margin:0}
+.quote blockquote p{font-family:var(--display);font-weight:800;letter-spacing:-.03em;line-height:1.12;font-size:clamp(24px,3vw,38px);margin:0}
+.quote figcaption{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-top:28px;padding-top:22px;border-top:2px dashed var(--ink)}
+.quote .who{font-weight:700;font-size:18px}
+.quote .biz{display:inline-block;background:var(--ink);color:var(--lemon);font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.quote .stars{margin-left:auto;color:var(--pink);font-size:22px;letter-spacing:3px;-webkit-text-stroke:1px var(--ink)}
+@media (max-width:560px){.quote .stars{margin-left:0}}
+
+/* sticky mobile CTA */
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;transform:translateY(140%);transition:transform .25s ease}
+.sticky .btn{width:100%;box-shadow:5px 5px 0 var(--bs)}
+.sticky.show{transform:none}
+@media (max-width:760px){.sticky{display:block}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+.no-js .rv{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+  .mail{opacity:1}
+}
+</style>
+</head>
+<body class="no-js">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark" href="/" aria-label="lemonlolly home">lemonlolly<span class="pinkdot">.</span></a>
+    <nav class="nav" aria-label="Page">
+      <a href="#get">What you get</a>
+      <a href="#packages">Packages</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-ink" href="#enquire" data-track="nav_cta">Get <span class="long">my Klaviyo </span>ready</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- 1. HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">For Shopify brands</span>
+      <h1>Your Christmas traffic is coming.</h1>
+      <p class="sub">What happens to the people who don't buy the first time?</p>
+      <p class="lead">You're about to spend more on ads, content, stock and getting people to your store. Let's make sure the people who browse, subscribe, abandon their cart or buy don't just disappear.</p>
+      <p class="lead">We'll audit your Klaviyo, rebuild it, design fully branded emails, set up the flows and load your Christmas sequence. <span class="hl">Tested and switched on before the rush.</span></p>
+      <div class="btn-row">
+        <a class="btn btn-ink" href="#enquire" data-track="hero_cta" data-cta="primary">Get my Klaviyo ready <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn-cream" href="#teardown" data-track="teardown_cta" data-cta="hero">Show me what I'm missing</a>
+      </div>
+      <p class="micro">One-off build. No ongoing retainer required.</p>
+    </div>
+
+    <div class="journey" role="img" aria-label="Customer journey: visitor, subscribes, browses, adds to cart, buys, comes back. At each step an automated email is sent: welcome, browse nudge, cart reminder, thank-you, and a come-back email.">
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><defs><path id="c" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><text font-family="Space Grotesk,sans-serif" font-size="10.5" font-weight="700" letter-spacing="2.2" fill="#141109"><textPath href="#c">BUILT ONCE ✳ KEEPS WORKING ✳ </textPath></text></svg>
+        <b>✳</b>
+      </div>
+      <div class="journey-title" aria-hidden="true"><span>Your store, on autopilot</span><span class="live"><i></i>Flows live</span></div>
+      <ol class="steps" aria-hidden="true">
+        <li class="step"><span class="dot"></span><span class="lbl">Visitor</span><span class="mail y">Popup: 10% for joining</span></li>
+        <li class="step"><span class="dot"></span><span class="lbl">Subscribes</span><span class="mail">Welcome #1 sent</span></li>
+        <li class="step"><span class="dot"></span><span class="lbl">Browses</span><span class="mail p">"Still looking?"</span></li>
+        <li class="step"><span class="dot"></span><span class="lbl">Adds to cart</span><span class="mail y">Cart reminder</span></li>
+        <li class="step"><span class="dot"></span><span class="lbl">Buys</span><span class="mail">Thanks + care tips</span></li>
+        <li class="step"><span class="dot"></span><span class="lbl">Comes back</span><span class="mail p">"New in. Thought of you."</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Audit</span><span>Rebuild</span><span>Branded emails</span><span>Automated flows</span><span>Christmas sequence</span><span>Tested &amp; live</span>
+    <span>Audit</span><span>Rebuild</span><span>Branded emails</span><span>Automated flows</span><span>Christmas sequence</span><span>Tested &amp; live</span>
+  </div>
+</div>
+
+<!-- 2. PROBLEM -->
+<section class="sec">
+  <div class="wrap problem-grid">
+    <div class="problem-copy rv">
+      <h2>You're paying for the traffic.<span class="sub">Don't lose them after the click.</span></h2>
+      <p style="margin-top:28px">Most Shopify stores don't have an email problem because they aren't sending enough newsletters.</p>
+      <p>They have a <strong class="hl">system problem.</strong></p>
+      <p class="beat">Someone finds you through an ad.</p>
+      <p class="beat">They browse. Maybe they subscribe.</p>
+      <p class="beat">Maybe they add something to their cart.</p>
+      <p class="beat">Then life happens.</p>
+      <p style="margin-top:16px">If the right emails aren't already sitting behind the store, ready to pick up that conversation automatically, that customer can simply disappear.</p>
+      <p><strong>Christmas makes that gap a lot more expensive.</strong></p>
+    </div>
+    <div class="flow rv" role="img" aria-label="Ad spend goes to Meta, Google and social, which sends people to Shopify. Some buy now. The bigger group doesn't buy, and that's who we build for.">
+      <div class="node money" aria-hidden="true">$</div>
+      <div class="down" aria-hidden="true"></div>
+      <div class="node" aria-hidden="true">Meta / Google / Social</div>
+      <div class="down" aria-hidden="true"></div>
+      <div class="node" aria-hidden="true" style="background:var(--lemon)">Your Shopify store</div>
+      <div class="down" aria-hidden="true"></div>
+      <div class="split" aria-hidden="true">
+        <div class="path buy"><span class="icon">✓</span><strong>Buys now</strong></div>
+        <div class="path nobuy"><span class="icon">?</span><strong>Doesn't buy</strong></div>
+      </div>
+      <p class="flow-note">We're interested in the second group.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="sec get" id="get">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">What you get</span>
+      <h2>The whole thing. Done. Before December.</h2>
+    </div>
+    <div class="get-grid">
+      <article class="get-card rv"><span class="num">01</span><h3>An audit</h3><p>We go through your Klaviyo, Shopify integration, tracking, forms and flows. What's live, what's sitting in draft and what's quietly broken.</p></article>
+      <article class="get-card rv"><span class="num">02</span><h3>A rebuild</h3><p>We pull apart what isn't pulling its weight and rebuild the core system around your brand, products and customers.</p></article>
+      <article class="get-card rv"><span class="num">03</span><h3>Fully branded emails</h3><p>A master template that actually looks like your store. Not Shopify meeting Microsoft Word in a dark alley.</p></article>
+      <article class="get-card rv"><span class="num">04</span><h3>Automated flows</h3><p>Welcome, browse, abandoned cart, post-purchase and winback. Written, designed, wired up and running in the background.</p></article>
+      <article class="get-card rv"><span class="num">05</span><h3>Your Christmas sequence</h3><p>BFCM and Christmas campaign emails written, designed and scheduled, so the busy weeks don't start with a blank template.</p></article>
+      <article class="get-card rv"><span class="num">06</span><h3>Tested &amp; switched on</h3><p>Signup forms, segments, sending setup, mobile checks. Everything tested before it goes live. Flows in draft aren't doing much flowing.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 3. DIAGNOSTIC -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Quick question</span>
+      <h2>Which one sounds like your store?</h2>
+    </div>
+    <div class="diag-grid">
+      <article class="diag a rv">
+        <span class="tag" aria-hidden="true">A</span>
+        <h3>"We have Shopify. Klaviyo? Not really."</h3>
+        <p>Maybe you've got Shopify emails running.</p>
+        <p>Maybe Klaviyo was installed at some point.</p>
+        <p>Maybe there's a popup and you're not entirely sure where the addresses go.</p>
+        <p class="kicker">We'll connect it properly and build the core system from scratch.</p>
+        <div class="spacer"></div>
+        <a class="btn btn-lemon" href="#pkg-setup" data-track="package_cta" data-package="setup" data-cta="diagnostic">I need the setup <span class="arr" aria-hidden="true">→</span></a>
+      </article>
+      <article class="diag b rv">
+        <span class="tag" aria-hidden="true">B</span>
+        <h3>"We have Klaviyo. It's just doing bugger all."</h3>
+        <p>You've got flows. Some are live. Some aren't.</p>
+        <p>The branding is old, the emails don't really look like your website, and nobody has looked at the customer journey in a while.</p>
+        <p class="kicker">Perfect. We'll pull it apart and rebuild the bits that should be making themselves useful.</p>
+        <div class="spacer"></div>
+        <a class="btn btn-ink" href="#pkg-rebuild" data-track="package_cta" data-package="rebuild" data-cta="diagnostic">I need the rebuild <span class="arr" aria-hidden="true">→</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="proof" aria-labelledby="proof-h">
+  <div class="wrap">
+    <h2 id="proof-h" class="sr-only">What clients say</h2>
+    <figure class="quote rv">
+      <span class="mark" aria-hidden="true">&ldquo;</span>
+      <blockquote>
+        <p>The team at lemonlolly helped us move our site over to Shopify, took us off Mailchimp and set up our Klaviyo. We saw an instant return on investment and had our <span class="hl">biggest online revenue month since December 2025.</span> Highly recommend.</p>
+      </blockquote>
+      <figcaption>
+        <span class="who">Sharon Templeton</span>
+        <span class="biz">Temple Day Spa</span>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 4 + 5. PACKAGES -->
+<section class="sec packages" id="packages">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Two ways in</span>
+      <h2>Pick your starting point.</h2>
+    </div>
+    <div class="pkg-grid">
+
+      <article class="pkg rv" id="pkg-setup" aria-labelledby="setup-h">
+        <div class="pkg-top">
+          <span class="badge">For stores starting from scratch</span>
+          <h2 id="setup-h">Starting from scratch?<span class="sub">Let's build the machine.</span></h2>
+          <div class="price"><b>$1,495</b><span>+ GST</span></div>
+          <p>One-off implementation for Shopify brands that don't yet have a proper Klaviyo system running.</p>
+        </div>
+        <div class="pkg-body">
+          <h4>What's included</h4>
+          <ul class="incl">
+            <li>Shopify + Klaviyo integration setup and check</li>
+            <li>Subscriber and customer sync</li>
+            <li>Branded master email template</li>
+            <li>Branded signup form / popup</li>
+            <li>Welcome flow</li>
+            <li>Abandoned cart flow</li>
+            <li>Browse abandonment flow</li>
+            <li>Post-purchase flow</li>
+            <li>Core segmentation</li>
+            <li>Sending and domain setup review</li>
+            <li>Mobile optimisation</li>
+            <li>Testing and go-live</li>
+          </ul>
+          <div class="callout">
+            <strong>Built once. Keeps working.</strong>
+            <p>This isn't a batch of Christmas newsletters. It's the automated system behind your store, built to keep working after the decorations come down.</p>
+          </div>
+          <a class="btn btn-lemon" href="#enquire" data-track="package_cta" data-package="setup" data-cta="package">Build mine — $1,495 + GST</a>
+          <p class="pkg-note">Want Christmas campaign emails added? Ask us and we'll quote it.</p>
+        </div>
+      </article>
+
+      <article class="pkg feature rv" id="pkg-rebuild" aria-labelledby="rebuild-h">
+        <div class="pkg-top">
+          <span class="badge">For existing Klaviyo accounts</span>
+          <h2 id="rebuild-h">Already using Klaviyo?<span class="sub">Let's make it earn its keep.</span></h2>
+          <div class="price"><b>$1,950</b><span>+ GST</span></div>
+          <p>The Christmas Revenue Rebuild. We audit what you've got, find the holes in the customer journey, rebuild the core automations around your brand, and load your Christmas sequence.</p>
+        </div>
+        <div class="pkg-body">
+          <h4>What's included</h4>
+          <ul class="incl">
+            <li>Full Klaviyo account audit</li>
+            <li>Shopify integration and tracking review</li>
+            <li>Existing flow review</li>
+            <li>Branded master email system</li>
+            <li>Signup form / popup review and rebuild</li>
+            <li>Welcome flow rebuild</li>
+            <li>Abandoned cart flow rebuild</li>
+            <li>Browse abandonment flow</li>
+            <li>Post-purchase flow</li>
+            <li>Winback flow</li>
+            <li>Back-in-stock setup where it makes sense</li>
+            <li>Core segmentation</li>
+            <li>Basic deliverability review</li>
+            <li>Mobile optimisation</li>
+            <li>Testing and go-live</li>
+            <li>Christmas / BFCM readiness check</li>
+          </ul>
+          <div class="xmas-box">
+            <h4><span aria-hidden="true">✳</span> Plus: your Christmas campaign sequence</h4>
+            <ul>
+              <li>VIP early access</li><li>Black Friday</li><li>Cyber Monday</li><li>Gift guide</li><li>Shipping cut-off</li><li>Last-minute gifts</li>
+            </ul>
+            <p>Written in your voice, designed on your new template, segmented and scheduled. Ready before you need it.</p>
+          </div>
+          <a class="btn btn-pink" href="#enquire" data-track="package_cta" data-package="rebuild" data-cta="package">Rebuild my Klaviyo — $1,950 + GST</a>
+          <p class="pkg-note">Klaviyo subscription costs are separate.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 6. WHAT GETS BUILT -->
+<section class="sec" id="built">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">What actually gets built</span>
+      <h2>Emails that show up at the right moment.</h2>
+    </div>
+    <ol class="timeline">
+      <li class="tl rv"><span class="pill">WELCOME</span><span class="when">Trigger: joins your list</span><h3>They've just met you.</h3><p>Introduce the brand, the products and a reason to buy, without turning the relationship into a wall of discounts.</p></li>
+      <li class="tl rv"><span class="pill">BROWSE</span><span class="when">Trigger: views a product</span><h3>They looked. They left.</h3><p>Bring the products they were eyeing back into the conversation.</p></li>
+      <li class="tl rv"><span class="pill">CART</span><span class="when">Trigger: leaves checkout</span><h3>They got <em>this</em> close.</h3><p>Pick the buying journey back up when someone leaves products behind.</p></li>
+      <li class="tl rv"><span class="pill">POST-PURCHASE</span><span class="when">Trigger: places an order</span><h3>The sale shouldn't be the end.</h3><p>Set expectations, back up the purchase and lay the groundwork for the next one.</p></li>
+      <li class="tl rv"><span class="pill">WINBACK</span><span class="when">Trigger: gone quiet</span><h3>It's been a while.</h3><p>Give past customers a reason to remember you exist.</p></li>
+    </ol>
+
+    <div class="xmas-lane rv">
+      <div class="top">
+        <h3>And the Christmas sequence on top.</h3>
+        <p>Flows run all year. These campaigns are built for the busiest six weeks, scheduled in advance so you're not writing emails at 11pm on Black Friday eve.</p>
+      </div>
+      <ol class="xm">
+        <li><b>VIP early access</b><span>Subscribers and past buyers get first look.</span></li>
+        <li><b>Black Friday</b><span>Your offer, clearly, to the right segments.</span></li>
+        <li><b>Cyber Monday</b><span>The follow-up, not a copy-paste.</span></li>
+        <li><b>Gift guide</b><span>Help people pick. By person, price or vibe.</span></li>
+        <li><b>Shipping cut-off</b><span>Order by this date to get it before Christmas.</span></li>
+        <li><b>Last-minute gifts</b><span>Gift cards and click-and-collect for the late ones.</span></li>
+      </ol>
+    </div>
+
+    <p class="arc rv" aria-label="Discover, consider, buy, return">Discover <i aria-hidden="true">→</i> Consider <i aria-hidden="true">→</i> Buy <i aria-hidden="true">→</i> Return</p>
+  </div>
+</section>
+
+<!-- 7. BEFORE / AFTER -->
+<section class="sec ba">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Before / after</span>
+      <h2>Same store. Very different email experience.</h2>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-col before rv">
+        <span class="ba-label">Before</span>
+        <div class="phone" role="img" aria-label="Example of a generic abandoned cart email: small logo text, grey image placeholder, generic headline and a discount code.">
+          <div class="screen e-old" aria-hidden="true">
+            <div class="logo">[LOGO]</div>
+            <div class="img">image</div>
+            <h5>You left something in your cart!</h5>
+            <p>Hi there, we noticed you left items in your cart. Complete your purchase today.</p>
+            <div class="code">Use code SAVE10 for 10% off</div>
+            <a href="#" tabindex="-1">Click here to return to cart</a>
+            <div class="foot">Unsubscribe | Powered by default template</div>
+          </div>
+        </div>
+        <ul class="ba-list">
+          <li>Generic logo</li><li>Generic discount</li><li>Generic template</li><li>One abandoned cart email</li><li>Flows sitting in draft</li><li>Emails that look nothing like the website</li><li>No obvious post-purchase journey</li>
+        </ul>
+      </div>
+      <div class="ba-col after rv">
+        <span class="ba-label">After</span>
+        <div class="phone" role="img" aria-label="Example of a branded abandoned cart email for a fictional store: brand header, lifestyle image with the headline 'Still thinking it over?', the product left behind, a clear button and delivery and returns info.">
+          <div class="screen e-new" aria-hidden="true">
+            <div class="bar"><b>Saltbush &amp; Co.</b><span>Shop · Journal</span></div>
+            <div class="heroimg"></div>
+            <div class="body">
+              <p>Your linen set is still here, and it's one of our most-loved pieces this season.</p>
+              <div class="prod"><span class="thumb"></span><div><b>Washed Linen Set, Sage</b><small>Queen · Ready to ship</small></div></div>
+              <span class="cta">Finish checking out</span>
+              <div class="usp"><span>Free AU shipping $100+</span><span>30-day returns</span></div>
+            </div>
+          </div>
+        </div>
+        <ul class="ba-list">
+          <li>Your actual brand</li><li>Clear hierarchy</li><li>An intentional customer journey</li><li>Automations built around behaviour</li><li>Mobile-ready design</li><li>Flows tested and live</li><li>A system designed to keep working</li>
+        </ul>
+      </div>
+    </div>
+    <p class="fict" style="margin-top:28px">Illustrative examples. Saltbush &amp; Co. is a made-up store, not a client.</p>
+  </div>
+</section>
+
+<!-- 8. WHY NOW -->
+<section class="sec why">
+  <div class="wrap why-grid">
+    <div class="rv">
+      <span class="eyebrow">Before the rush</span>
+      <h2>Don't wait until Black Friday to discover your abandoned cart flow has been switched off since February.</h2>
+      <p class="lead" style="margin-top:26px">The time to build this isn't when orders, campaigns and customer service are already going mad. It's now.</p>
+      <p class="lead">Then when your Christmas traffic arrives, the system is already doing its job.</p>
+      <p class="limited">We take on a limited number of builds at a time so we can actually build them properly.</p>
+    </div>
+    <div class="why-steps rv" aria-label="Build it, test it, switch it on">
+      <div><em>1</em> Build it.</div>
+      <div><em>2</em> Test it.</div>
+      <div><em>3</em> Switch it on.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. PROCESS -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">How it works</span>
+      <h2>We make this fairly painless.</h2>
+    </div>
+    <ol class="proc">
+      <li class="rv"><span class="n" aria-hidden="true">01</span><h3>We look</h3><p>We review the store, brand, products, existing emails and current Klaviyo setup.</p></li>
+      <li class="rv"><span class="n" aria-hidden="true">02</span><h3>We map</h3><p>We work out what each automated journey and Christmas send needs to do, and where the gaps are.</p></li>
+      <li class="rv"><span class="n" aria-hidden="true">03</span><h3>We build</h3><p>Copy, design, automation logic, segmentation, campaign scheduling and setup.</p></li>
+      <li class="rv"><span class="n" aria-hidden="true">04</span><h3>We switch it on</h3><p>Everything gets tested before it goes live. You approve it, we flick the switch.</p></li>
+    </ol>
+    <p class="proc-after rv">Then the emails get on with their job <span class="hl">while you get on with yours.</span></p>
+  </div>
+</section>
+
+<!-- 10. WHO FOR -->
+<section class="sec fit">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow" style="background:var(--lemon);color:var(--ink)">Who this is for</span>
+      <h2>Built for Shopify stores with somewhere to go.</h2>
+    </div>
+    <div class="fit-grid">
+      <div class="fit-card yes rv">
+        <h3>Good fit if you're…</h3>
+        <ul>
+          <li>Already getting traffic and orders</li>
+          <li>Spending on Meta, Google, content or creators</li>
+          <li>Running an established product range</li>
+          <li>Pretty sure email should be doing more</li>
+          <li>Counting on Christmas and BFCM</li>
+          <li>After someone to build it, not hand you another strategy document</li>
+        </ul>
+      </div>
+      <div class="fit-card no rv">
+        <h3>Probably not for you if…</h3>
+        <ul>
+          <li>Your store hasn't launched yet</li>
+          <li>You're still deciding what to sell</li>
+          <li>You want the cheapest possible email template</li>
+          <li>You only need one newsletter sent</li>
+        </ul>
+        <p class="wink">No hard feelings. Come back when you're ready and we'll be here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. TEARDOWN -->
+<section class="sec form-sec" id="teardown">
+  <div class="wrap form-grid">
+    <div class="form-copy rv">
+      <span class="eyebrow">Free 5-minute teardown</span>
+      <h2>Not sure what's wrong with your Klaviyo?<span class="sub">We'll have a look.</span></h2>
+      <p class="lead" style="margin-top:24px">Send us your Shopify store and we'll take a quick look at the customer email journey. If we can see something worth fixing, we'll record a short teardown showing you what we'd change.</p>
+      <ul class="nope">
+        <li>No 47-page audit.</li>
+        <li>No awkward sales deck.</li>
+        <li>Just useful stuff.</li>
+      </ul>
+    </div>
+
+    <form class="card-form rv" id="teardown-form" data-form="teardown" novalidate>
+      <div class="form-head"><h3 style="margin-bottom:20px">Tear down my emails</h3></div>
+      <div class="fields">
+        <div class="field"><label for="t-first">First name</label><input id="t-first" name="first_name" autocomplete="given-name" required></div>
+        <div class="field"><label for="t-biz">Business name</label><input id="t-biz" name="business" autocomplete="organization" required></div>
+        <div class="field full"><label for="t-url">Shopify store URL</label><input id="t-url" name="store_url" type="url" inputmode="url" autocomplete="url" placeholder="https://yourstore.com.au" required></div>
+        <div class="field full"><label for="t-email">Email</label><input id="t-email" name="email" type="email" autocomplete="email" required></div>
+        <fieldset class="field full">
+          <legend class="legend">Do you currently use Klaviyo?</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="uses_klaviyo" value="Yes" required><span>Yes</span></label>
+            <label class="chip"><input type="radio" name="uses_klaviyo" value="No"><span>No</span></label>
+            <label class="chip"><input type="radio" name="uses_klaviyo" value="Not sure"><span>Not sure</span></label>
+          </div>
+        </fieldset>
+        <div class="field full">
+          <label for="t-issue">Biggest issue</label>
+          <select id="t-issue" name="biggest_issue" required>
+            <option value="">Choose one</option>
+            <option>Setup</option>
+            <option>Email design &amp; branding</option>
+            <option>Flows &amp; automation</option>
+            <option>Christmas / BFCM campaigns</option>
+            <option>Deliverability</option>
+            <option>Not sure</option>
+          </select>
+        </div>
+        <div class="field full"><label for="t-msg">Anything else? <span class="opt">(optional)</span></label><textarea id="t-msg" name="message" rows="3"></textarea></div>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-ink" type="submit">Tear down my emails <span class="arr" aria-hidden="true">→</span></button>
+        <p class="form-error" role="alert"></p>
+        <p class="form-small">Free. No obligation. We'll only use your details to reply.</p>
+      </div>
+      <div class="success" role="status" aria-live="polite" tabindex="-1">
+        <div class="big" aria-hidden="true">✓</div>
+        <h3>Got it. We'll take a look and be in touch.</h3>
+        <p>Keep an eye on your inbox (and the promotions tab, just in case).</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- 12. FAQ -->
+<section class="sec" id="faq" style="border-top:var(--bw) solid var(--ink)">
+  <div class="wrap faq-grid">
+    <div class="rv">
+      <span class="eyebrow">FAQ</span>
+      <h2>Fair questions.</h2>
+      <p class="lead" style="margin-top:22px">Something else on your mind? Email <a href="mailto:hello@lemonlolly.com.au">hello@lemonlolly.com.au</a>.</p>
+    </div>
+    <div class="faq rv">
+      <details><summary>Is this only for Christmas?</summary><div class="ans"><p>No. Christmas is the reason to get it done now, but the core flows are evergreen and keep running after the holiday period.</p></div></details>
+      <details><summary>What's in the Christmas sequence?</summary><div class="ans"><p>Included in the Revenue Rebuild: six campaign emails (VIP early access, Black Friday, Cyber Monday, gift guide, shipping cut-off and last-minute gifts), written, designed on your template, segmented and scheduled. You approve everything before it goes out. On the Setup package it can be added. Just ask.</p></div></details>
+      <details><summary>Do I need Klaviyo already?</summary><div class="ans"><p>No. Choose the Shopify Setup if you're starting from scratch. If Klaviyo is already installed and needs work, choose the Revenue Rebuild.</p></div></details>
+      <details><summary>Is Klaviyo included in the price?</summary><div class="ans"><p>The price covers our implementation work. Klaviyo subscription and software costs are separate.</p></div></details>
+      <details><summary>Do I need Shopify?</summary><div class="ans"><p>Yes. These packages are designed specifically for Shopify stores.</p></div></details>
+      <details><summary>Do you write the emails too?</summary><div class="ans"><p>Yes. Copy, design and build are included for everything in your package.</p></div></details>
+      <details><summary>Will the emails match my brand?</summary><div class="ans"><p>Yes. The emails should feel like an extension of your store, not a generic template with your logo dropped in.</p></div></details>
+      <details><summary>Do I have to sign a marketing retainer?</summary><div class="ans"><p>No. This is a one-off project.</p></div></details>
+      <details><summary>Can lemonlolly manage Klaviyo afterwards?</summary><div class="ans"><p>Yes. Ongoing campaigns, optimisation or broader marketing support can be discussed separately, but none of it is required.</p></div></details>
+      <details><summary>How quickly can you do it?</summary><div class="ans"><p data-config="turnaround">Turnaround depends on the account and current build queue. We'll confirm timing before you book.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- 13. FINAL CTA -->
+<section class="sec final">
+  <div class="wrap rv">
+    <h2>Christmas traffic is expensive.</h2>
+    <p class="sub">Make the follow-up count.</p>
+    <p class="lead">Get the automated email system behind your Shopify store built, branded and running before the rush.</p>
+    <div class="btn-row">
+      <a class="btn btn-ink" href="#enquire" data-track="final_cta" data-cta="primary">Start my Klaviyo build <span class="arr" aria-hidden="true">→</span></a>
+      <a class="btn btn-cream" href="#teardown" data-track="teardown_cta" data-cta="final">Show me what I'm missing</a>
+    </div>
+    <p class="micro">From $1,495 + GST · One-off project · No retainer required</p>
+  </div>
+  <div class="stripe" aria-hidden="true"></div>
+</section>
+
+<!-- MAIN ENQUIRY -->
+<section class="enquiry" id="enquire">
+  <div class="wrap form-grid">
+    <div class="form-copy rv">
+      <span class="eyebrow" style="background:var(--lemon);color:var(--ink)">Let's get it built</span>
+      <h2>Tell us about your store.</h2>
+      <p class="lead" style="margin-top:24px">Pick a package (or tell us to pick one for you). We'll come back with timing and next steps. No checkout, no pressure.</p>
+      <p class="contact">Rather just talk? <a href="mailto:hello@lemonlolly.com.au">hello@lemonlolly.com.au</a> or <a href="tel:+61875231012">08 7523 1012</a>.</p>
+    </div>
+
+    <form class="card-form rv" id="enquiry-form" data-form="enquiry" novalidate>
+      <div class="form-head"><h3 style="margin-bottom:20px">Start my Klaviyo build</h3></div>
+      <div class="fields">
+        <div class="field"><label for="e-first">First name</label><input id="e-first" name="first_name" autocomplete="given-name" required></div>
+        <div class="field"><label for="e-last">Last name</label><input id="e-last" name="last_name" autocomplete="family-name" required></div>
+        <div class="field"><label for="e-biz">Business</label><input id="e-biz" name="business" autocomplete="organization" required></div>
+        <div class="field"><label for="e-url">Store URL</label><input id="e-url" name="store_url" type="url" inputmode="url" autocomplete="url" placeholder="https://" required></div>
+        <div class="field"><label for="e-email">Email</label><input id="e-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="e-phone">Phone <span class="opt">(optional)</span></label><input id="e-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <fieldset class="field full">
+          <legend class="legend">Package</legend>
+          <div class="pkg-pick">
+            <label class="chip"><input type="radio" name="package" value="Shopify Klaviyo Setup — $1,495 + GST" data-pkg="setup" required><span>Shopify Klaviyo Setup <b>$1,495 + GST</b></span></label>
+            <label class="chip"><input type="radio" name="package" value="Klaviyo Christmas Revenue Rebuild — $1,950 + GST" data-pkg="rebuild"><span>Christmas Revenue Rebuild <b>$1,950 + GST</b></span></label>
+            <label class="chip"><input type="radio" name="package" value="Not sure — recommend one" data-pkg="unsure"><span>Not sure — recommend one</span></label>
+          </div>
+        </fieldset>
+        <div class="field full"><label for="e-msg">Message</label><textarea id="e-msg" name="message" rows="4" placeholder="What's working, what isn't, and when your big sale starts." required></textarea></div>
+      </div>
+      <div class="form-actions">
+        <button class="btn btn-pink" type="submit">Let's get it built <span class="arr" aria-hidden="true">→</span></button>
+        <p class="form-error" role="alert"></p>
+        <p class="form-small">We'll reply within business hours.</p>
+      </div>
+      <div class="success" role="status" aria-live="polite" tabindex="-1">
+        <div class="big" aria-hidden="true">✓</div>
+        <h3>Nice. It's in.</h3>
+        <p>We'll look over your store and come back with timing and next steps.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <a class="wordmark" href="/">lemonlolly<span class="pinkdot">.</span></a>
+      <p class="tag">Brand, social, ads, web and content. Made with a bit of zing in Adelaide.</p>
+      <div class="flinks">
+        <a href="/ecommerce">For ecommerce</a>
+        <a href="/local">For local business</a>
+        <a href="/blog">Blog</a>
+        <a href="/">Main site</a>
+        <a href="mailto:hello@lemonlolly.com.au">hello@lemonlolly.com.au</a>
+      </div>
+      <p class="legal">Prices in AUD, excluding GST.<br>Klaviyo and Shopify are trademarks of their owners; lemonlolly isn't affiliated with either.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky" aria-hidden="true">
+  <a class="btn btn-ink" href="#enquire" data-track="sticky_cta" tabindex="-1">Get my Klaviyo ready <span class="arr" aria-hidden="true">→</span></a>
+</div>
+
+<script>
+/* ===== CONFIG — edit these ===== */
+var LL_CONFIG = {
+  // Both forms post to the site's existing Formspree form (same one as the home page contact form).
+  // Clear an endpoint to fall back to a pre-filled email to NOTIFY_EMAIL.
+  TEARDOWN_ENDPOINT: "https://formspree.io/f/mkolepkn",
+  ENQUIRY_ENDPOINT: "https://formspree.io/f/mkolepkn",
+  NOTIFY_EMAIL: "hello@lemonlolly.com.au"
+};
+
+(function(){
+  document.body.classList.remove('no-js');
+
+  /* analytics: uses whatever is already on the site, adds nothing new */
+  function track(name, props){
+    props = props || {};
+    try{ if(window.dataLayer) window.dataLayer.push(Object.assign({event:name}, props)); }catch(e){}
+    try{ if(typeof window.gtag==='function') window.gtag('event', name, props); }catch(e){}
+    try{ if(typeof window.plausible==='function') window.plausible(name, {props:props}); }catch(e){}
+    try{ if(window.fbq && /submitted/.test(name)) window.fbq('track','Lead',props); }catch(e){}
+  }
+
+  var enquiry = document.getElementById('enquiry-form');
+  function preselect(pkg){
+    var r = enquiry.querySelector('input[data-pkg="'+pkg+'"]');
+    if(r) r.checked = true;
+  }
+
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('[data-track]');
+    if(!a) return;
+    var props = {};
+    if(a.dataset.cta) props.cta_location = a.dataset.cta;
+    if(a.dataset.package){ props.package = a.dataset.package; if(a.getAttribute('href')==='#enquire') preselect(a.dataset.package); }
+    track(a.dataset.track, props);
+  });
+
+  /* forms */
+  function validate(form){
+    var bad = null;
+    form.querySelectorAll('[required]').forEach(function(el){
+      var ok;
+      if(el.type==='radio'){ ok = !!form.querySelector('input[name="'+el.name+'"]:checked'); }
+      else { ok = el.checkValidity() && el.value.trim() !== ''; }
+      if(el.type==='url' && !ok && el.value.trim()){
+        // be forgiving: add https:// if they typed yourstore.com.au
+        el.value = 'https://' + el.value.trim().replace(/^\/+/, '');
+        ok = el.checkValidity();
+      }
+      el.setAttribute('aria-invalid', ok ? 'false' : 'true');
+      if(!ok && !bad) bad = el;
+    });
+    return bad;
+  }
+
+  function toMailto(kind, data){
+    var subject = kind==='teardown' ? 'Klaviyo teardown request — ' + (data.business||'') : 'Klaviyo build enquiry — ' + (data.business||'');
+    var body = Object.keys(data).map(function(k){ return k.replace(/_/g,' ') + ': ' + data[k]; }).join('\n');
+    return 'mailto:' + LL_CONFIG.NOTIFY_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  }
+
+  document.querySelectorAll('form[data-form]').forEach(function(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var kind = form.dataset.form;
+      var err = form.querySelector('.form-error');
+      err.style.display = 'none';
+      var bad = validate(form);
+      if(bad){
+        err.textContent = 'Just a couple of fields to fill in first.';
+        err.style.display = 'block';
+        bad.focus();
+        return;
+      }
+      var data = {};
+      new FormData(form).forEach(function(v,k){ data[k] = v; });
+      data.source_page = location.href;
+      data.form_name = kind==='teardown' ? 'klaviyo_teardown' : 'klaviyo_enquiry';
+      data._subject = (kind==='teardown' ? 'Klaviyo teardown request: ' : 'Klaviyo build enquiry: ') + (data.business||'');
+
+      var endpoint = kind==='teardown' ? LL_CONFIG.TEARDOWN_ENDPOINT : LL_CONFIG.ENQUIRY_ENDPOINT;
+      var btn = form.querySelector('button[type=submit]');
+      function done(){
+        form.classList.add('is-sent');
+        var s = form.querySelector('.success'); s.focus();
+        track(kind==='teardown' ? 'teardown_submitted' : 'enquiry_submitted', {package: data.package || '', uses_klaviyo: data.uses_klaviyo || ''});
+        // same conversion event the home page contact form uses
+        try{ window.dataLayer = window.dataLayer || []; window.dataLayer.push({event:'generate_lead', form_name:data.form_name}); }catch(e){}
+      }
+      if(endpoint){
+        btn.disabled = true; btn.style.opacity = .6;
+        fetch(endpoint, {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body: JSON.stringify(data)})
+          .then(function(r){ if(!r.ok) throw new Error(r.status); done(); })
+          .catch(function(){
+            btn.disabled = false; btn.style.opacity = 1;
+            err.innerHTML = 'That didn’t send. Try again, or email <a href="mailto:'+LL_CONFIG.NOTIFY_EMAIL+'">'+LL_CONFIG.NOTIFY_EMAIL+'</a>.';
+            err.style.display = 'block';
+          });
+      } else {
+        window.location.href = toMailto(kind, data);
+        done();
+      }
+    });
+  });
+
+  /* sticky mobile CTA: show after hero, hide over forms */
+  var sticky = document.getElementById('sticky');
+  var hero = document.querySelector('.hero');
+  var heroGone = false, visible = new Set();
+  function upd(){ var on = heroGone && visible.size===0; sticky.classList.toggle('show', on); sticky.setAttribute('aria-hidden', on ? 'false' : 'true'); sticky.querySelector('a').tabIndex = on ? 0 : -1; }
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(en){ heroGone = !en[0].isIntersecting; upd(); }).observe(hero);
+    var fo = new IntersectionObserver(function(ens){ ens.forEach(function(en){ if(en.isIntersecting) visible.add(en.target); else visible.delete(en.target); }); upd(); });
+    document.querySelectorAll('#teardown, #enquire, .final, .site-foot').forEach(function(el){ fo.observe(el); });
+
+    /* reveal on scroll */
+    var ro = new IntersectionObserver(function(ens){ ens.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); ro.unobserve(en.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){ ro.observe(el); });
+  } else {
+    document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* if someone lands on #pkg-* hash, preselect */
+  if(/rebuild/.test(location.hash)) preselect('rebuild');
+  if(/setup/.test(location.hash)) preselect('setup');
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Is this only for Christmas?","acceptedAnswer":{"@type":"Answer","text":"No. Christmas is the reason to get it done now, but the core flows are evergreen and keep running after the holiday period."}},
+    {"@type":"Question","name":"Do I need Klaviyo already?","acceptedAnswer":{"@type":"Answer","text":"No. Choose the Shopify Setup if you're starting from scratch. If Klaviyo is already installed and needs work, choose the Revenue Rebuild."}},
+    {"@type":"Question","name":"Is Klaviyo included in the price?","acceptedAnswer":{"@type":"Answer","text":"The price covers lemonlolly's implementation work. Klaviyo subscription and software costs are separate."}},
+    {"@type":"Question","name":"Do you write the emails too?","acceptedAnswer":{"@type":"Answer","text":"Yes. Copy, design and build are included for everything in your package."}},
+    {"@type":"Question","name":"Do I have to sign a marketing retainer?","acceptedAnswer":{"@type":"Answer","text":"No. This is a one-off project."}}
+  ]
+}
+</script>
+</body>
+</html>
