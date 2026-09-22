@@ -92,12 +92,12 @@ function gtag_report_conversion(url) {
 
   /* Client logo wall */
   .ll-logowall{ display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px; margin-top:44px; }
-  .ll-logo-tile{ display:flex; align-items:center; justify-content:center; text-align:center; min-height:150px; padding:28px 24px; border:2px solid rgba(255,249,233,0.16); border-radius:18px; background:rgba(255,249,233,0.02); transition:border-color .18s, background .18s, transform .18s; }
+  .ll-logo-tile{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; text-align:center; min-height:150px; padding:28px 24px; border:2px solid rgba(255,249,233,0.16); border-radius:18px; background:rgba(255,249,233,0.02); transition:border-color .18s, background .18s, transform .18s; }
   .ll-logo-tile:hover{ border-color:var(--lemon); background:rgba(255,225,0,0.06); transform:translateY(-4px); }
-  .ll-logo-word{ font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(18px,2vw,24px); letter-spacing:-0.01em; color:rgba(255,249,233,0.82); }
-  .ll-logo-tile img{ max-width:78%; max-height:66px; width:auto; height:auto; object-fit:contain; opacity:0.9; transition:opacity .18s, transform .18s; }
+  .ll-logo-word{ font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(14px,1.5vw,17px); letter-spacing:-0.01em; color:rgba(255,249,233,0.62); }
+  .ll-logo-tile img{ max-width:82%; max-height:52px; width:auto; height:auto; object-fit:contain; opacity:1; transition:opacity .18s, transform .18s; }
   .ll-logo-tile:hover img{ opacity:1; }
-  @media (max-width:640px){ .ll-logowall{ grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; } .ll-logo-tile{ min-height:110px; padding:20px 14px; } }
+  @media (max-width:640px){ .ll-logowall{ grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; } .ll-logo-tile{ min-height:110px; padding:20px 14px; gap:10px; } .ll-logo-tile img{ max-height:40px; } }
 </style>
 </head>
 <body>
@@ -236,19 +236,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p style="font-size:17px; line-height:1.5; max-width:52ch; margin:0; color:rgba(255,249,233,0.7);">A few of the Adelaide businesses we've helped look sharp and grow.</p>
 
       <div class="ll-logowall">
-        <div class="ll-logo-tile"><span class="ll-logo-word">Temple Day Spa</span></div>
-        <div class="ll-logo-tile"><span class="ll-logo-word">Nest &amp; Temple</span></div>
-        <div class="ll-logo-tile"><span class="ll-logo-word">Templeton Built</span></div>
-        <div class="ll-logo-tile"><span class="ll-logo-word">Edgepoint AI</span></div>
-        <div class="ll-logo-tile"><span class="ll-logo-word">Wonder Wash</span></div>
-        <div class="ll-logo-tile"><span class="ll-logo-word">Wounded Bull Partners</span></div>
-        <div class="ll-logo-tile"><span class="ll-logo-word">Fringe Heals</span></div>
-        <div class="ll-logo-tile"><span class="ll-logo-word">Hexicom Software</span></div>
-        <div class="ll-logo-tile"><span class="ll-logo-word">Adelaide Polo Classic</span></div>
-        <div class="ll-logo-tile"><span class="ll-logo-word">Miei Creative Hub</span></div>
-        <div class="ll-logo-tile"><span class="ll-logo-word">Taylor Artist Gallery</span></div>
-        <div class="ll-logo-tile"><span class="ll-logo-word">Mammoth Self Storage</span></div>
-        <div class="ll-logo-tile"><span class="ll-logo-word">OneMenu</span></div>
+        <div class="ll-logo-tile"><img src="assets/logos/temple-day-spa.png" alt="Temple Day Spa logo" width="90" height="55" loading="lazy"><span class="ll-logo-word">Temple Day Spa</span></div>
+        <div class="ll-logo-tile"><img src="assets/logos/nest-and-temple.png" alt="Nest and Temple logo" width="59" height="58" loading="lazy"><span class="ll-logo-word">Nest &amp; Temple</span></div>
+        <div class="ll-logo-tile"><img src="assets/logos/templeton-built.png" alt="Templeton Built logo" width="52" height="51" loading="lazy"><span class="ll-logo-word">Templeton Built</span></div>
+        <div class="ll-logo-tile"><img src="assets/logos/edgepoint-ai.png" alt="Edgepoint AI logo" width="141" height="24" loading="lazy"><span class="ll-logo-word">Edgepoint AI</span></div>
+        <div class="ll-logo-tile"><img src="assets/logos/wonder-wash.png" alt="Wonder Wash logo" width="72" height="47" loading="lazy"><span class="ll-logo-word">Wonder Wash</span></div>
+        <div class="ll-logo-tile"><img src="assets/logos/wounded-bull-partners.png" alt="Wounded Bull Partners logo" width="67" height="41" loading="lazy"><span class="ll-logo-word">Wounded Bull Partners</span></div>
+        <div class="ll-logo-tile"><img src="assets/logos/fringe-heals.png" alt="Fringe Heals logo" width="108" height="33" loading="lazy"><span class="ll-logo-word">Fringe Heals</span></div>
+        <div class="ll-logo-tile"><img src="assets/logos/hexicom-software.png" alt="Hexicom Software logo" width="125" height="30" loading="lazy"><span class="ll-logo-word">Hexicom Software</span></div>
+        <div class="ll-logo-tile"><img src="assets/logos/adelaide-polo-classic.png" alt="Adelaide Polo Classic logo" width="42" height="44" loading="lazy"><span class="ll-logo-word">Adelaide Polo Classic</span></div>
+        <div class="ll-logo-tile"><img src="assets/logos/miei-creative-hub.png" alt="Miei Creative Hub logo" width="74" height="26" loading="lazy"><span class="ll-logo-word">Miei Creative Hub</span></div>
+        <div class="ll-logo-tile"><img src="assets/logos/taylor-artist-gallery.png" alt="Taylor Artist Gallery logo" width="59" height="34" loading="lazy"><span class="ll-logo-word">Taylor Artist Gallery</span></div>
+        <div class="ll-logo-tile"><img src="assets/logos/mammoth-self-storage.png" alt="Mammoth Self Storage logo" width="38" height="43" loading="lazy"><span class="ll-logo-word">Mammoth Self Storage</span></div>
+        <div class="ll-logo-tile"><img src="assets/logos/onemenu.png" alt="OneMenu logo" width="110" height="19" loading="lazy"><span class="ll-logo-word">OneMenu</span></div>
       </div>
     </div>
   </section>
