@@ -95,7 +95,7 @@ function gtag_report_conversion(url) {
   .ll-logo-tile{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; text-align:center; min-height:150px; padding:28px 24px; border:2px solid rgba(255,249,233,0.16); border-radius:18px; background:rgba(255,249,233,0.02); transition:border-color .18s, background .18s, transform .18s; }
   .ll-logo-tile:hover{ border-color:var(--lemon); background:rgba(255,225,0,0.06); transform:translateY(-4px); }
   .ll-logo-word{ font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(14px,1.5vw,17px); letter-spacing:-0.01em; color:rgba(255,249,233,0.62); }
-  .ll-logo-tile img{ max-width:82%; max-height:52px; width:auto; height:auto; object-fit:contain; opacity:1; transition:opacity .18s, transform .18s; }
+  .ll-logo-tile img{ max-width:82%; max-height:52px; width:auto; height:auto; object-fit:contain; filter:url(#ll-logo-even); opacity:0.9; transition:opacity .18s, transform .18s; }
   .ll-logo-tile:hover img{ opacity:1; }
   @media (max-width:640px){ .ll-logowall{ grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; } .ll-logo-tile{ min-height:110px; padding:20px 14px; gap:10px; } .ll-logo-tile img{ max-height:40px; } }
 </style>
@@ -235,6 +235,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 style="font-family:'Archivo',sans-serif; font-weight:900; font-size:clamp(38px,5vw,72px); line-height:0.98; letter-spacing:-0.03em; margin:12px 0 10px;">Brands we've worked with.</h2>
       <p style="font-size:17px; line-height:1.5; max-width:52ch; margin:0; color:rgba(255,249,233,0.7);">A few of the Adelaide businesses we've helped look sharp and grow.</p>
 
+      <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute; width:0; height:0; overflow:hidden;">
+        <defs>
+          <filter id="ll-logo-even" color-interpolation-filters="sRGB">
+            <feComponentTransfer result="boosted"><feFuncA type="linear" slope="2.5" intercept="0"/></feComponentTransfer>
+            <feFlood flood-color="#FFF9E9" result="tint"/>
+            <feComposite in="tint" in2="boosted" operator="in"/>
+          </filter>
+        </defs>
+      </svg>
       <div class="ll-logowall">
         <div class="ll-logo-tile"><img src="assets/logos/temple-day-spa.png" alt="Temple Day Spa logo" width="90" height="55" loading="lazy"><span class="ll-logo-word">Temple Day Spa</span></div>
         <div class="ll-logo-tile"><img src="assets/logos/nest-and-temple.png" alt="Nest and Temple logo" width="59" height="58" loading="lazy"><span class="ll-logo-word">Nest &amp; Temple</span></div>
