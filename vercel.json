@@ -12,5 +12,15 @@
       "destination": "https://lemonindy6.gumroad.com/l/christmas-revenue-playbook",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/client/miei/creativestudio",
+      "destination": "https://miei-creative-studio.vercel.app/client/miei/creativestudio"
+    },
+    {
+      "source": "/client/miei/creativestudio/:path*",
+      "destination": "https://miei-creative-studio.vercel.app/client/miei/creativestudio/:path*"
+    }
   ]
 }
