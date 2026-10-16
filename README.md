@@ -5,6 +5,7 @@ Hosted on Vercel, source of truth on GitHub. Push to `main` = publish.
 
 - `index.html` — home page
 - `klaviyo-shopify.html` — Klaviyo for Shopify landing page (/klaviyo-shopify). Self-contained styles; forms post to Formspree
+- `agency-check.html` — free agency health check (/agency-check). Self-contained; scoring engine is the block between ENGINE-START/END, unlock form posts to Formspree
 - `favicon.svg` — site icon
 - `vercel.json` — hosting config (clean URLs)
 - `robots.txt`, `sitemap.xml` — SEO
