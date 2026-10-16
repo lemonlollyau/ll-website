@@ -493,6 +493,7 @@ input[aria-invalid=true]{border-color:var(--pink);box-shadow:0 0 0 3px var(--pin
             <div class="money"><input type="number" id="salary" inputmode="numeric" min="30000" max="400000" step="1000"><span class="suffix">a year</span></div>
             <p class="hint">Before super. Excludes ad spend and platform fees, which you’d pay either way.</p>
             <label class="tick"><input type="checkbox" id="ptax"><span>We pay payroll tax (our total wages are over our state’s threshold)</span></label>
+            <label class="tick"><input type="checkbox" id="loading"><span>Their award or contract includes 17.5% annual leave loading</span></label>
           </div>
           <div class="field">
             <span class="lbl" id="method-l">How would you find them?</span>
@@ -506,11 +507,12 @@ input[aria-invalid=true]{border-color:var(--pink);box-shadow:0 0 0 3px var(--pin
 
       <div class="part inputs">
         <div class="part-h"><span class="part-n" aria-hidden="true">3</span><h3>And the agency?</h3></div>
-        <p class="part-intro">We’ve started with lemonlolly’s retainer: a team of five, no lock-in contract. Got another quote? Pop it in.</p>
+        <p class="part-intro">We’ve started with lemonlolly’s price for the skills you ticked. It’s priced on what you need: $1,900 + GST a month for one service, up to $4,190 for the full suite. No lock-in. Got another quote? Pop it in.</p>
         <div class="row" style="margin-top:0">
           <div class="field">
             <label for="fee">Agency fee per month</label>
-            <div class="money"><input type="number" id="fee" inputmode="numeric" min="0" max="100000" step="10" value="2490"><span class="suffix">+ GST</span></div>
+            <div class="money"><input type="number" id="fee" inputmode="numeric" min="0" max="100000" step="10"><span class="suffix">+ GST</span></div>
+            <p class="hint" id="fee-note" aria-live="polite">Tick some skills and we’ll fill in lemonlolly’s price.</p>
             <p class="hint">Most businesses claim the GST back, so we compare everything before GST.</p>
           </div>
           <div class="field go" style="align-content:end">
@@ -580,8 +582,12 @@ input[aria-invalid=true]{border-color:var(--pink);box-shadow:0 0 0 3px var(--pin
       <li><span>Equipment<small>Laptop, phone, desk setup. Our estimate</small></span><b>$3,000, year one</b></li>
       <li><span>Tools and software<small>Basics $600. Adobe ~$1,300 if design, branding or video. SEO tool ~$2,500 if SEO. Scheduling $600 if social</small></span><b>Depends on skills</b></li>
       <li><span>Training to stay current<small>Courses and certifications. Our estimate</small></span><b>$1,500 a year</b></li>
-      <li><span>Paid time away<small>4 weeks’ annual leave, up to 10 days’ personal leave, plus public holidays</small></span><b>Up to ~8 weeks</b></li>
-      <li><span>Agency fee<small>What you enter. Ad spend and platform fees are the same either way, so they’re left out</small></span><b>Your number × 12</b></li>
+      <li><span>Paid leave with no work done<small>4 weeks’ annual leave + up to 10 days’ sick and carer’s leave. Guides put paid leave at 11–13% of salary</small></span><b>~6 weeks, 11.5%</b></li>
+      <li><span>Annual leave loading<small>Only if you tick it. Many awards pay 17.5% extra on annual leave</small></span><b>~1.3% of salary</b></li>
+      <li><span>PAYG tax<small>Not added. It’s withheld from the salary and paid to the ATO, so it’s already inside the salary figure</small></span><b>Already in salary</b></li>
+      <li><span>Public holidays and long service leave<small>Not added. Agencies take public holidays too, and long service leave only builds up over many years</small></span><b>Left out</b></li>
+      <li><span>lemonlolly’s price<small>$1,900 for one service, then about $229 for each extra, up to $4,190 for the full suite. Video &amp; photography isn’t offered</small></span><b>$1,900–$4,190 a month</b></li>
+      <li><span>Agency fee<small>lemonlolly’s price, or your own quote. Ad spend and platform fees are the same either way, so they’re left out</small></span><b>Monthly fee × 12</b></li>
     </ul>
     <p style="margin-top:22px;max-width:52em"><b>How rare is this person?</b> Each skill belongs to a specialist role that’s usually advertised on its own. A specialist is typically strong in their own area and capable in a couple of neighbouring ones. We count how many specialists it takes to cover your list properly. One is realistic. Four or more, and you’re looking for a unicorn. That’s our rule of thumb, not survey data — but you can check it against any job board.</p>
     <p style="max-width:52em"><b>To be fair to employees:</b> an agency retainer buys a set amount of work from a team, not a full-time person. For most small businesses that’s plenty — and it’s specialist time, not learning time.</p>
@@ -613,7 +619,8 @@ input[aria-invalid=true]{border-color:var(--pink);box-shadow:0 0 0 3px var(--pin
     </div>
     <div class="faq">
       <details><summary>Isn’t this rigged in favour of agencies?</summary><div class="ans"><p>We’re an agency, so we’d understand the suspicion. That’s why every number is on this page with its source, and you can change the salary and the agency fee. If the hire comes out cheaper, the calculator says so.</p></div></details>
-      <details><summary>Why isn’t paid leave in the total?</summary><div class="ans"><p>Because it’s already inside the salary. We show it separately so you can see the weeks you’re paying for but not getting marketing done, unless someone covers.</p></div></details>
+      <details><summary>Isn’t paid leave already part of the salary?</summary><div class="ans"><p>Yes, the salary keeps paying while they’re away. We count those six weeks because you’re paying 52 weeks of salary for about 46 weeks of work, while an agency team keeps going. If you’d bring in a temp to cover, it becomes real extra cash.</p></div></details>
+      <details><summary>Why isn’t PAYG tax added?</summary><div class="ans"><p>PAYG is the income tax you withhold from your employee’s pay and send to the ATO. It comes out of their salary rather than on top of it, so adding it would count it twice. Payroll tax is different: that’s a state tax on top of wages, and you can tick it if it applies to you.</p></div></details>
       <details><summary>Is GST included?</summary><div class="ans"><p>No. Salaries don’t attract GST, and most businesses claim back the GST on agency fees, so we compare everything before GST.</p></div></details>
       <details><summary>What about ad spend?</summary><div class="ans"><p>Left out on purpose. Whether a staff member or an agency runs your ads, the money that goes to Google or Meta is the same.</p></div></details>
       <details><summary>Our salaries are lower than SEEK’s averages.</summary><div class="ans"><p>Change the salary to your number. Everything else recalculates from it.</p></div></details>
@@ -666,7 +673,6 @@ var LL_CONFIG = {
   NOTIFY_EMAIL: "hello@lemonlolly.com.au",
   BOOKING_URL: "https://calendly.com/lemonlolly-au/30min",
   PAGE_URL: "https://www.lemonlolly.com.au/hire-or-agency",
-  DEFAULT_FEE: 2490,
   // true = cost comparison and rarity are free; the skills map, the team you'd need and the things to weigh unlock with an email.
   GATE_DETAILS: true
 };
@@ -687,7 +693,11 @@ var HC = (function(){
     EQUIP: 3000,        // laptop, phone, desk setup (our estimate)
     TRAIN: 1500,        // courses and certifications (our estimate)
     TOOLS_BASE: 600,    // Canva, stock images and the like (our estimate)
-    LEAVE_WEEKS: 8      // 4 weeks annual + up to 2 weeks personal + public holidays
+    LEAVE: 6 / 52,      // paid leave with no work done: 4 weeks annual + 2 weeks personal/sick ≈ 11.5% (Expert360: 11–13%)
+    LOADING: 0.175 * 4 / 52, // 17.5% annual leave loading on 4 weeks, if their award or contract has it
+    FLOOR: 1900,        // lemonlolly: one service, per month ex GST
+    FULL: 4190,         // lemonlolly: the full suite (every skill except video & photography)
+    NOT_OFFERED: ['video'] // not part of lemonlolly's team
   };
 
   var TOOLS = {
@@ -788,16 +798,26 @@ var HC = (function(){
     return list;
   }
 
+  /* lemonlolly's price scales with the services ticked: $1,900 for one, + an equal step per extra, $4,190 for the full suite. */
+  function lemonPrice(sel){
+    var offered = SKILLS.length - A.NOT_OFFERED.length;
+    var n = (sel || []).filter(function(s){ return skill(s) && A.NOT_OFFERED.indexOf(s) < 0; }).length;
+    if(!n) return 0;
+    return Math.round(A.FLOOR + (n - 1) * (A.FULL - A.FLOOR) / (offered - 1));
+  }
+
   function calc(inp){
     var sel = (inp.skills || []).filter(skill);
     var S = Math.max(0, +inp.salary || 0), fee = Math.max(0, +inp.fee || 0);
-    var pt = inp.ptax ? A.PAYROLL : 0;
+    var pt = inp.ptax ? A.PAYROLL : 0, ld = inp.loading ? A.LOADING : 0;
     var tl = tools(sel), toolsC = tl.reduce(function(a, t){ return a + t.c; }, 0);
     var lines = [
       {id:'salary',  n:'Base salary',                         y1:S,              on:S},
       {id:'super',   n:'Superannuation (12%)',                y1:S*A.SUPER,      on:S*A.SUPER},
       {id:'wc',      n:'Workers’ compensation (~1%)',         y1:S*A.WORKCOMP,   on:S*A.WORKCOMP},
       {id:'ptax',    n:'Payroll tax (4.95%)',                 y1:S*pt,           on:S*pt, hide:!pt},
+      {id:'leave',   n:'Paid leave with no work done (~6 weeks)', y1:S*A.LEAVE, on:S*A.LEAVE, detail:'4 weeks’ annual leave and up to 10 days’ sick and carer’s leave'},
+      {id:'loading', n:'Annual leave loading (17.5%)',        y1:S*ld,           on:S*ld, hide:!ld},
       {id:'recruit', n: inp.method === 'recruiter' ? 'Recruiter fee (~20% of salary)' : 'Job ad',
                                                               y1: inp.method === 'recruiter' ? S*A.RECRUITER : A.JOB_AD, on:0},
       {id:'ramp',    n:'Getting up to speed (first 3 months at ~40% output)', y1:S*A.RAMP, on:0},
@@ -813,7 +833,7 @@ var HC = (function(){
     var counts = {strong:0, basic:0, gap:0};
     sel.forEach(function(s){ counts[cov.map[s]]++; });
     var rlv = Math.min(4, Math.max(1, tm.length));
-    var oncost = 1 + A.SUPER + A.WORKCOMP + pt;
+    var oncost = 1 + A.SUPER + A.WORKCOMP + pt + A.LEAVE + ld;
     var teamRoles = tm.map(function(rid){
       var r = ROLES[rid];
       return {id:rid, n:r.n, sal:r.sal, src:r.src, covers:inter(r.strong, sel).map(function(s){ return skill(s).l; }), cost:Math.round(r.sal * oncost + A.TRAIN + A.TOOLS_BASE)};
@@ -821,17 +841,18 @@ var HC = (function(){
     var teamCost = teamRoles.reduce(function(a, r){ return a + r.cost; }, 0) + (toolsC - A.TOOLS_BASE);
 
     return {
-      inputs:{skills:sel, level:inp.level, salary:S, fee:fee, ptax:!!inp.ptax, method:inp.method},
+      inputs:{skills:sel, level:inp.level, salary:S, fee:fee, ptax:!!inp.ptax, loading:!!inp.loading, method:inp.method},
+      lemon:{price:lemonPrice(sel), notOffered:sel.filter(function(s){ return A.NOT_OFFERED.indexOf(s) > -1; }), services:sel.filter(function(s){ return A.NOT_OFFERED.indexOf(s) < 0; }).length},
       lines:lines, hireY1:hireY1, hireOn:hireOn, agency:agency,
       saveY1:hireY1 - agency, saveOn:hireOn - agency,
       agencyShare: hireY1 ? agency / hireY1 : 0,
       coverage:cov, counts:counts, rarity:RARITY[rlv - 1], specialists:tm.length,
       team:teamRoles, teamCost:Math.round(teamCost),
-      leaveWeeks:A.LEAVE_WEEKS, leaveValue:Math.round(S / 52 * A.LEAVE_WEEKS)
+      payg:true
     };
   }
 
-  return {A:A, SKILLS:SKILLS, ROLES:ROLES, LEVELS:LEVELS, RARITY:RARITY, skill:skill, level:level, calc:calc};
+  return {A:A, SKILLS:SKILLS, ROLES:ROLES, LEVELS:LEVELS, RARITY:RARITY, skill:skill, level:level, calc:calc, lemonPrice:lemonPrice};
 })();
 if(typeof module !== 'undefined') module.exports = HC;
 /*ENGINE-END*/
@@ -844,7 +865,7 @@ if(typeof module !== 'undefined') module.exports = HC;
   var esc = function(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); };
   var money = function(n){ return '$' + Math.round(n).toLocaleString('en-AU'); };
   var kfmt = function(n){ return '$' + Math.round(n / 1000) + 'k'; };
-  var shown = false, unlocked = !C.GATE_DETAILS, sent = false, salaryEdited = false, R = null, started = false;
+  var shown = false, unlocked = !C.GATE_DETAILS, sent = false, salaryEdited = false, feeEdited = false, R = null, started = false;
 
   function track(name, props){
     props = props || {};
@@ -872,7 +893,24 @@ if(typeof module !== 'undefined') module.exports = HC;
   }).join('');
   var salary = $('#salary'), fee = $('#fee');
   salary.value = HC.level('spec').sal;
-  fee.value = C.DEFAULT_FEE;
+  function selected(){ return [].map.call(document.querySelectorAll('input[name=skill]:checked'), function(i){ return i.value; }); }
+  function syncFee(){
+    var sel = selected(), p = HC.lemonPrice(sel), note = $('#fee-note');
+    var nv = sel.filter(function(s){ return HC.A.NOT_OFFERED.indexOf(s) > -1; }).length;
+    var n = sel.length - nv;
+    if(!feeEdited) fee.value = p || '';
+    if(feeEdited){
+      note.innerHTML = 'Using your own quote. <button type="button" class="linkbtn" id="fee-reset">Use lemonlolly’s price</button>';
+      $('#fee-reset').addEventListener('click', function(){ feeEdited = false; syncFee(); if(shown) render(false); });
+    } else if(!sel.length){
+      note.textContent = 'Tick some skills and we’ll fill in lemonlolly’s price.';
+    } else if(!n){
+      note.textContent = 'lemonlolly doesn’t offer video & photography, so there’s no lemonlolly price here. Pop in another agency’s quote to compare.';
+    } else {
+      note.textContent = 'lemonlolly’s price for your ' + n + ' service' + (n > 1 ? 's' : '') + ': ' + money(p) + ' + GST a month.' + (nv ? ' Video & photography isn’t included — it’s not something we offer.' : '');
+    }
+  }
+  syncFee();
 
   function readInputs(){
     return {
@@ -881,6 +919,7 @@ if(typeof module !== 'undefined') module.exports = HC;
       salary: +salary.value || 0,
       fee: fee.value === '' ? 0 : +fee.value,
       ptax: $('#ptax').checked,
+      loading: $('#loading').checked,
       method: ($('input[name=method]:checked') || {}).value || 'ad'
     };
   }
@@ -888,8 +927,11 @@ if(typeof module !== 'undefined') module.exports = HC;
     document.querySelectorAll('input[name=skill]').forEach(function(i){ i.checked = (v.skills || []).indexOf(i.value) > -1; });
     var lv = document.querySelector('input[name=level][value="' + (v.level || 'spec') + '"]'); if(lv) lv.checked = true;
     salary.value = v.salary || HC.level(v.level).sal; salaryEdited = salary.value != HC.level(v.level).sal;
-    fee.value = v.fee != null ? v.fee : C.DEFAULT_FEE;
     $('#ptax').checked = !!v.ptax;
+    $('#loading').checked = !!v.loading;
+    feeEdited = v.fee != null && +v.fee !== HC.lemonPrice(v.skills || []);
+    if(feeEdited) fee.value = v.fee;
+    syncFee();
     var m = document.querySelector('input[name=method][value="' + (v.method || 'ad') + '"]'); if(m) m.checked = true;
     updateCount();
   }
@@ -904,14 +946,14 @@ if(typeof module !== 'undefined') module.exports = HC;
     if(t.closest('#results')) return;            // the report form lives in here; don't re-render under it
     if(t.type === 'number') return;             // salary and fee re-render on 'input' already
     if(!started){ started = true; track('calc_started'); }
-    if(t.name === 'skill') updateCount();
+    if(t.name === 'skill'){ updateCount(); syncFee(); }
     if(t.name === 'level' && !salaryEdited) salary.value = HC.level(t.value).sal;
     if(shown) render(false);
   });
   salary.addEventListener('input', function(){ salaryEdited = true; if(shown) render(false); });
-  fee.addEventListener('input', function(){ if(shown) render(false); });
-  $('#all-btn').addEventListener('click', function(){ document.querySelectorAll('input[name=skill]').forEach(function(i){ i.checked = true; }); updateCount(); if(shown) render(false); });
-  $('#none-btn').addEventListener('click', function(){ document.querySelectorAll('input[name=skill]').forEach(function(i){ i.checked = false; }); updateCount(); if(shown) render(false); });
+  fee.addEventListener('input', function(){ feeEdited = fee.value !== '' && +fee.value !== HC.lemonPrice(selected()); syncFee(); if(shown) render(false); });
+  $('#all-btn').addEventListener('click', function(){ document.querySelectorAll('input[name=skill]').forEach(function(i){ i.checked = true; }); updateCount(); syncFee(); if(shown) render(false); });
+  $('#none-btn').addEventListener('click', function(){ document.querySelectorAll('input[name=skill]').forEach(function(i){ i.checked = false; }); updateCount(); syncFee(); if(shown) render(false); });
 
   $('#go-btn').addEventListener('click', function(){
     var v = readInputs();
@@ -932,8 +974,12 @@ if(typeof module !== 'undefined') module.exports = HC;
     var lv = HC.level(v.level), h = '';
     h += '<div class="print-head"><b class="wordmark">lemonlolly<span class="pinkdot">.</span></b> Hire or agency — ' + new Date().toLocaleDateString('en-AU', {day:'numeric', month:'long', year:'numeric'}) + '</div>';
 
+    var hasAgency = v.fee > 0, isLemon = hasAgency && !feeEdited;
     // headline
-    if(R.saveY1 > 0){
+    if(!hasAgency){
+      h += '<h3 class="res-h">Here’s what one ' + esc(lv.n.toLowerCase()) + ' really costs.</h3>';
+      h += '<p class="res-sub">' + (R.lemon.services ? 'Pop in an agency fee above to see the comparison.' : 'lemonlolly doesn’t offer video & photography, so there’s no lemonlolly price to compare. Pop in another agency’s quote above to see the comparison.') + '</p>';
+    } else if(R.saveY1 > 0){
       h += '<h3 class="res-h">An agency team costs ' + money(R.saveY1) + ' less in year one.</h3>';
       h += '<p class="res-sub">That’s ' + Math.round(R.agencyShare * 100) + '% of the cost of one ' + esc(lv.n.toLowerCase()) + ' — and your list needs ' + (R.specialists === 1 ? 'one specialist' : R.specialists + ' specialists') + ' to cover properly.</p>';
     } else {
@@ -943,9 +989,10 @@ if(typeof module !== 'undefined') module.exports = HC;
 
     // side by side
     var max = Math.max(R.hireY1, R.agency, 1);
+    if(hasAgency){
     h += '<div class="vs">' +
       '<div class="side hire"><h4>One ' + esc(lv.n.toLowerCase()) + ', year one</h4><span class="big">' + money(R.hireY1) + '</span><span class="per">' + money(R.hireY1 / 12) + ' a month, all in</span><span class="after">Every year after: <b>' + money(R.hireOn) + '</b></span></div>' +
-      '<div class="side agency"><h4>Agency team, year one</h4><span class="big">' + money(R.agency) + '</span><span class="per">' + money(v.fee) + ' a month + GST</span><span class="after">Every year after: <b>' + money(R.agency) + '</b></span></div>' +
+      '<div class="side agency"><h4>' + (isLemon ? 'lemonlolly team, year one' : 'Agency team, year one') + '</h4><span class="big">' + money(R.agency) + '</span><span class="per">' + money(v.fee) + ' a month + GST' + (isLemon ? ' for ' + R.lemon.services + ' service' + (R.lemon.services > 1 ? 's' : '') : '') + '</span><span class="after">Every year after: <b>' + money(R.agency) + '</b>' + (isLemon && R.lemon.notOffered.length ? '<br>Video &amp; photography not included' : '') + '</span></div>' +
     '</div>';
     h += '<div class="split" aria-hidden="true"><div class="split-row">One hire<div class="split-bar h"><i data-w="' + (R.hireY1 / max * 100).toFixed(1) + '"></i></div></div>' +
          '<div class="split-row">Agency team<div class="split-bar a"><i data-w="' + (R.agency / max * 100).toFixed(1) + '"></i></div></div></div>';
@@ -953,6 +1000,7 @@ if(typeof module !== 'undefined') module.exports = HC;
       h += '<div class="diff">Over three years, that’s about <b>' + money(R.saveY1 + 2 * R.saveOn) + '</b> you could put into ads, stock or your own pocket.</div>';
     }
     h += '<p class="fair">To be fair: an agency retainer buys a set amount of work from a team, not a full-time person. For most small businesses that’s plenty, and it’s specialist time rather than learning time.</p>';
+    }
 
     // rarity (free)
     var rr = R.rarity;
@@ -972,7 +1020,7 @@ if(typeof module !== 'undefined') module.exports = HC;
       h += '<tr><td>' + esc(l.n) + (l.detail ? '<small>' + esc(l.detail) + '</small>' : '') + '</td><td class="n">' + money(l.y1) + '</td><td class="n">' + (l.on ? money(l.on) : '—') + '</td></tr>';
     });
     h += '</tbody><tfoot><tr><td>Total</td><td class="n">' + money(R.hireY1) + '</td><td class="n">' + money(R.hireOn) + '</td></tr></tfoot></table>' +
-      '<div class="away"><b>Plus up to ' + R.leaveWeeks + ' weeks a year away</b> — annual leave, sick days and public holidays. It’s already in the salary (about ' + money(R.leaveValue) + ' worth), but no marketing happens in those weeks unless someone covers.</div></div>';
+      '<div class="away"><b>About paid leave:</b> it’s paid out of the salary, so it isn’t extra cash out the door. We count it because you’re paying for 52 weeks and getting about 46 weeks of work — an agency team keeps going while someone’s away. PAYG tax isn’t added because it’s withheld from the salary, not paid on top.</div></div>';
 
     // details (gated)
     if(unlocked){ h += details(v); }
@@ -1047,8 +1095,8 @@ if(typeof module !== 'undefined') module.exports = HC;
 
   function cta(){
     var book = esc(C.BOOKING_URL);
-    if(R.saveY1 <= 0) return '<div class="cta-box"><h4>Weighing it up?</h4><p>Happy to talk it through honestly, including whether a hire is the better move for you. Free, 30 minutes.</p><a class="btn btn-ink" href="' + book + '" target="_blank" rel="noopener" data-track="book_cta">Book a free chat <span class="arr" aria-hidden="true">→</span></a></div>';
-    return '<div class="cta-box"><h4>Want the team without the hiring?</h4><p>lemonlolly is a team of five covering brand, social, ads, web and content, for one monthly fee with no lock-in. Let’s talk about what you need. Free, 30 minutes.</p><a class="btn btn-ink" href="' + book + '" target="_blank" rel="noopener" data-track="book_cta">Book a free chat <span class="arr" aria-hidden="true">→</span></a></div>';
+    if(R.saveY1 <= 0 || !(R.inputs.fee > 0)) return '<div class="cta-box"><h4>Weighing it up?</h4><p>Happy to talk it through honestly, including whether a hire is the better move for you. Free, 30 minutes.</p><a class="btn btn-ink" href="' + book + '" target="_blank" rel="noopener" data-track="book_cta">Book a free chat <span class="arr" aria-hidden="true">→</span></a></div>';
+    return '<div class="cta-box"><h4>Want the team without the hiring?</h4><p>lemonlolly is a team of five covering brand, social, ads, web and content, priced on what you need and with no lock-in. Let’s talk it through. Free, 30 minutes.</p><a class="btn btn-ink" href="' + book + '" target="_blank" rel="noopener" data-track="book_cta">Book a free chat <span class="arr" aria-hidden="true">→</span></a></div>';
   }
 
   function toast(msg){ var t = $('#toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(toast.t); toast.t = setTimeout(function(){ t.classList.remove('on'); }, 2200); }
@@ -1088,7 +1136,7 @@ if(typeof module !== 'undefined') module.exports = HC;
     d.skills = v.skills.map(function(s){ return HC.skill(s).l; }).join(', ');
     d.hire_level = HC.level(v.level).n;
     d.salary = v.salary; d.recruit_method = v.method; d.payroll_tax = v.ptax ? 'yes' : 'no';
-    d.agency_fee_month = v.fee;
+    d.agency_fee_month = v.fee; d.fee_source = v.fee > 0 ? (feeEdited ? 'own quote' : 'lemonlolly price') : 'none'; d.leave_loading = v.loading ? 'yes' : 'no';
     d.hire_year_one = R.hireY1; d.hire_ongoing = R.hireOn; d.agency_year = R.agency; d.difference_year_one = R.saveY1;
     d.specialists_needed = R.specialists; d.rarity = R.rarity.n; d.team_cost = R.teamCost;
     d.gaps = v.skills.filter(function(s){ return R.coverage.map[s] === 'gap'; }).map(function(s){ return HC.skill(s).l; }).join(', ') || 'none';
