@@ -21,6 +21,14 @@
     {
       "source": "/client/miei/creativestudio/:path*",
       "destination": "https://miei-creative-studio.vercel.app/client/miei/creativestudio/:path*"
+    },
+    {
+      "source": "/client/safedtracker",
+      "destination": "https://safed-tracker-hub.vercel.app/client/safedtracker"
+    },
+    {
+      "source": "/client/safedtracker/:path*",
+      "destination": "https://safed-tracker-hub.vercel.app/client/safedtracker/:path*"
     }
   ]
 }
