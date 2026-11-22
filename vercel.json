@@ -29,6 +29,14 @@
     {
       "source": "/client/safedtracker/:path*",
       "destination": "https://safed-tracker-hub.vercel.app/client/safedtracker/:path*"
+    },
+    {
+      "source": "/client/fringeheals",
+      "destination": "https://fringe-heals-hub.vercel.app/client/fringeheals"
+    },
+    {
+      "source": "/client/fringeheals/:path*",
+      "destination": "https://fringe-heals-hub.vercel.app/client/fringeheals/:path*"
     }
   ]
 }
