@@ -143,6 +143,7 @@ p{margin:0}
 .grid3 .quote-tile{font-size:17px;padding:12px}
 .grid3 .split2 img{object-fit:cover}
 .ptag{position:absolute;left:6px;bottom:6px;font-size:9px;line-height:1.4;background:rgba(255,255,255,.9);color:#2F2E26;padding:2px 6px;font-weight:500}
+.pf{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px;margin-top:36px}.pf figure{margin:0;background:var(--bg);border:1px solid var(--line)}.pf img{aspect-ratio:4/5;object-fit:cover;width:100%}.pf .b{padding:16px}.pf h3{font-size:24px;margin:0 0 8px}.pf p{font-size:13px;color:var(--muted);margin-top:8px}.pf q{display:block;font:italic 400 19px/1.25 'Cormorant Garamond',Georgia,serif;color:var(--ink);margin-top:10px}
 .legend{display:grid;gap:14px}
 .legend div{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;align-items:start;border-top:1px solid var(--line);padding-top:14px}
 .legend span{font:500 22px/1 'Cormorant Garamond',Georgia,serif;color:var(--olive)}
@@ -300,6 +301,15 @@ p{margin:0}
 <p class="kick">Instagram</p>
 <h2>A portfolio with a narrative</h2>
 <p class="lede">Buderim House leads month one, with Fingal Heads, Estelle House and Woolloongabba in rotation. Every tile carries a decision, a detail or a thought from Sally, so the grid reads like a walk through the home.</p>
+<h3 style="margin-top:36px">Five stories in rotation</h3>
+<div class="pf">
+<figure><img src="/clients/ecointeriors/img/s060.jpg" alt="Buderim House exterior"><div class="b"><h3>Buderim House</h3><span class="chip ca">The brief comes first</span><p>Rob and Sally’s Buderim talk gives us months of stories: reveal, don’t cover; light boxes; the kids’ loft. Pillars 1, 2 and 3.</p><q>“This loft wasn’t designed for Instagram.”</q></div></figure>
+<figure><img src="/clients/ecointeriors/img/f4.jpg" alt="Fingal Heads window and timber joinery"><div class="b"><h3>Fingal Heads</h3><span class="chip ca">The brief comes first</span><p>Published, with Rob’s architecture and Sally’s styling. Lead with the brief and the craft, and credit Rob. Pillars 1 and 4.</p><q>“What the family asked for, and the one thing we refused to cover up.”</q></div></figure>
+<figure><img src="/clients/ecointeriors/img/e3.jpg" alt="Estelle House bedroom"><div class="b"><h3>Estelle House</h3><span class="chip cb">Health by Design</span><p>Sally-styled. Finishes and materials up close: tiled benches, timber, linen, vintage. Pillars 2 and 4.</p><q>“Tiles on a bench you’ll wipe down every night. Here’s why they work.”</q></div></figure>
+<figure><img src="/clients/ecointeriors/img/w1.jpg" alt="Woolloongabba House bedroom and rammed earth wall"><div class="b"><h3>Woolloongabba and Hawthorne</h3><span class="chip cc">One studio, the whole home</span><p>Full furnishing and art curation, plus the early photos for a before-and-after. Pillars 3 and 5.</p><q>“Everything here was chosen for the people who live in it, down to the clock.”</q></div></figure>
+<figure><img src="/clients/ecointeriors/img/sally2.jpg" alt="Sally, photographed by Be Ryder"><div class="b"><h3>Sally, by Be Ryder</h3><span class="chip cx">Core message</span><p>The face of the studio: the About page, the Noosa community post and the Be Ryder credit Sally asked for. Pillars 4 and 5.</p><q>“I’ve been on the Sunshine Coast for 6 years now…”</q></div></figure>
+</div>
+<p class="note">Still to come: Highlands House, published about 15 years ago (a “15 years on” Health by Design story), and Burleigh House, never published or styled (honest process posts).</p>
 <div class="feedwrap">
 <div class="phone">
 <div class="prof">
@@ -383,7 +393,7 @@ p{margin:0}
 <div class="fb">
 <div class="fh"><div class="av"></div><div><b>Eco Interiors</b><small>Noosa community board · Just now</small></div></div>
 <div class="ft">I’ve been on the Sunshine Coast for 6 years now with a business based in Eumundi. I design homes around the people who live in them: healthy materials, good light, and furniture, art and plants chosen for you. If you’re planning a renovation or a new build, I’d love to hear how you live. 🌿</div>
-<div class="fi"><img src="/clients/ecointeriors/img/s060.jpg" alt=""><img src="/clients/ecointeriors/img/s052.jpg" alt=""></div>
+<div class="fi"><img src="/clients/ecointeriors/img/sally1.jpg" alt="Sally, photographed by Be Ryder"><img src="/clients/ecointeriors/img/e2.jpg" alt="Estelle House kitchen"></div>
 <div class="fa"><span>Like</span><span>Comment</span><span>Share</span></div>
 </div>
 <div class="legend">
@@ -414,7 +424,7 @@ const pillars=[
 const tile=p=>p.ba?`<div class="split2"><img src="/clients/ecointeriors/img/${p.ba[0]}" alt="Before"><img src="/clients/ecointeriors/img/${p.ba[1]}" alt="After"></div><span class="tag" style="left:10px">Before</span><span class="tag" style="right:10px">After</span>`:p.quote?`<div class="quote-tile">${p.quote}<small>Health by Design</small></div>`:`<img src="/clients/ecointeriors/img/${p.img}" alt="">${p.tag?`<span class="tag" style="right:10px">${p.tag}</span>`:''}`;
 const PM=[['ca','The brief comes first'],['cb','Health by Design'],['cc','One studio, the whole home'],['ca','The brief comes first'],['cc','One studio, the whole home']];
 document.getElementById('posts').innerHTML=pillars.map((p,i)=>`<div class="pcol"><p class="plabel">${i+1}. ${p.n}</p><span class="chip ${PM[i][0]}">Proves: ${PM[i][1]}</span><p class="pwhat">${p.w}</p><div class="post"><div class="ph"><span class="av"></span>_eco_interiors_</div><div class="pimg">${tile(p)}</div><div class="dots"><i></i><i></i><i></i><i></i></div><div class="cap"><b>_eco_interiors_</b>${p.cap} <span class="more">more</span></div></div></div>`).join('');
-const g=[['s094.jpg',1,'Buderim'],['f2.jpg',4,'Fingal Heads'],['q','Reveal, don’t cover.',2],['e1.jpg',2,'Estelle'],['ba',3,'Buderim'],['g1.jpg',5,'Woolloongabba'],['f1.jpg',5,'Fingal Heads'],['q','“How will you clean it?”',2],['s060.jpg',1,'Buderim'],['s091.jpg',4,'Buderim'],['s067.jpg',1,'Buderim'],['c8.jpg',4,'Buderim']];
+const g=[['s094.jpg',1,'Buderim'],['f2.jpg',4,'Fingal Heads'],['q','Reveal, don’t cover.',2],['e2.jpg',2,'Estelle'],['ba',3,'Buderim'],['w1.jpg',5,'Woolloongabba'],['sally1.jpg',4,'Sally'],['q','“How will you clean it?”',2],['f3.jpg',4,'Fingal Heads'],['e1.jpg',2,'Estelle'],['s067.jpg',1,'Buderim'],['g1.jpg',5,'Woolloongabba']];
 document.getElementById('grid').innerHTML=g.map(t=>`<div>${t[0]==='q'?`<div class="quote-tile">${t[1]}</div>`:t[0]==='ba'?`<div class="split2"><img src="/clients/ecointeriors/img/b1142.jpg" alt="Kitchen before"><img src="/clients/ecointeriors/img/s031.jpg" alt="Kitchen after"></div>`:`<img src="/clients/ecointeriors/img/${t[0]}" alt="${t[2]}">`}</div>`).join('');
 const L=[['1','The brief behind the home','Project stories: the loft, the light boxes, the exterior. Most space.'],['2','Health by Design','Quote tiles and finish details. Most space.'],['3','Inside the design process','Before and after pairs from the December 2024 photos.'],['4','Through Sally’s eye','Single images of what made her stop.'],['5','Working with Eco Interiors','Client relationships and a natural invitation.']];
 document.getElementById('legend').innerHTML=L.map(l=>`<div><span>${l[0]}</span><p><b>${l[1]}</b><br><span class="small" style="font:13px Montserrat,sans-serif;color:inherit;opacity:.75">${l[2]}</span></p></div>`).join('')+`<p class="note"><b>Four homes, one voice.</b> Buderim House, Fingal Heads, Estelle House and Woolloongabba rotate through the grid, so it reads as a portfolio, not one project. The three messages and Sally’s voice tie them together, not a single style.</p><p class="note">Rhythm: around 15 posts batched across the Christmas break, then two weeks at a time. Stories stay loose and in the moment.</p>`;
