@@ -142,6 +142,7 @@ p{margin:0}
 .grid3 img{width:100%;height:100%;object-fit:cover}
 .grid3 .quote-tile{font-size:17px;padding:12px}
 .grid3 .split2 img{object-fit:cover}
+.ptag{position:absolute;left:6px;bottom:6px;font-size:9px;line-height:1.4;background:rgba(255,255,255,.9);color:#2F2E26;padding:2px 6px;font-weight:500}
 .legend{display:grid;gap:14px}
 .legend div{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;align-items:start;border-top:1px solid var(--line);padding-top:14px}
 .legend span{font:500 22px/1 'Cormorant Garamond',Georgia,serif;color:var(--olive)}
@@ -298,7 +299,7 @@ p{margin:0}
 <div class="wrap">
 <p class="kick">Instagram</p>
 <h2>A portfolio with a narrative</h2>
-<p class="lede">Month one starts from the Buderim House. Every tile carries a decision, a detail or a thought from Sally, so the grid reads like a walk through the home.</p>
+<p class="lede">Buderim House leads month one, with Fingal Heads, Estelle House and Woolloongabba in rotation. Every tile carries a decision, a detail or a thought from Sally, so the grid reads like a walk through the home.</p>
 <div class="feedwrap">
 <div class="phone">
 <div class="prof">
@@ -404,19 +405,19 @@ p{margin:0}
 <script>
 {
 const pillars=[
-{n:'The brief behind the home',w:'Readers recognise their own needs in a finished home.',img:'s094.jpg',tag:'1 of 3',cap:'This loft wasn’t designed for Instagram. Rob’s rule on the Buderim House was simple: design for the people living there. Here’s what the family asked for, and how a net became the answer.'},
-{n:'Health by Design',w:'What “eco” means in a home you live in every day.',quote:'“How will you clean it?” is my first question about any finish.',img:'c19.jpg',cap:'One of the first things I want to know about a finish is how you’ll clean it. You’re going to live with it for years. Swipe for the three finishes we chose here, and why.'},
+{n:'The brief behind the home',w:'Readers recognise their own needs in a finished home.',img:'s094.jpg',tag:'Buderim House',cap:'This loft wasn’t designed for Instagram. Rob’s rule on the Buderim House was simple: design for the people living there. Here’s what the family asked for, and how a net became the answer.'},
+{n:'Health by Design',w:'What “eco” means in a home you live in every day.',img:'e1.jpg',tag:'Estelle House',cap:'One of the first things I want to know about a finish is how you’ll clean it. You’re going to live with it for years. Swipe for the three finishes we chose here, and why.'},
 {n:'Inside the design process',w:'What clients are buying, and how we work with builders and architects.',ba:['b1136.jpg','c13.jpg'],cap:'Same room, December 2024 and September 2026. What we kept, what we opened up, and the one change we made first.'},
-{n:'Through Sally’s eyes',w:'A reason to follow Sally between project reveals.',img:'s091.jpg',cap:'What made me stop and take this? Morning light through a fibreglass screen, and a plant that took nine months to grow into its spot.'},
-{n:'Working with Eco Interiors',w:'The relationship, the scope, and when to get in touch.',img:'s052.jpg',cap:'It started with a renovation after she found us in Green Magazine. Years later: art, furniture and around 100 plants. If you’re planning something big, we’d love to hear how you live.'}
+{n:'Through Sally’s eyes',w:'A reason to follow Sally between project reveals.',img:'f2.jpg',tag:'Fingal Heads',cap:'What made me stop and take this? Late light at Fingal Heads, and the one chair in the house everyone fights over.'},
+{n:'Working with Eco Interiors',w:'The relationship, the scope, and when to get in touch.',img:'g1.jpg',tag:'Woolloongabba',cap:'It started with a renovation after she found us in Green Magazine. Years later: art, furniture and around 100 plants. If you’re planning something big, we’d love to hear how you live.'}
 ];
 const tile=p=>p.ba?`<div class="split2"><img src="/clients/ecointeriors/img/${p.ba[0]}" alt="Before"><img src="/clients/ecointeriors/img/${p.ba[1]}" alt="After"></div><span class="tag" style="left:10px">Before</span><span class="tag" style="right:10px">After</span>`:p.quote?`<div class="quote-tile">${p.quote}<small>Health by Design</small></div>`:`<img src="/clients/ecointeriors/img/${p.img}" alt="">${p.tag?`<span class="tag" style="right:10px">${p.tag}</span>`:''}`;
 const PM=[['ca','The brief comes first'],['cb','Health by Design'],['cc','One studio, the whole home'],['ca','The brief comes first'],['cc','One studio, the whole home']];
 document.getElementById('posts').innerHTML=pillars.map((p,i)=>`<div class="pcol"><p class="plabel">${i+1}. ${p.n}</p><span class="chip ${PM[i][0]}">Proves: ${PM[i][1]}</span><p class="pwhat">${p.w}</p><div class="post"><div class="ph"><span class="av"></span>_eco_interiors_</div><div class="pimg">${tile(p)}</div><div class="dots"><i></i><i></i><i></i><i></i></div><div class="cap"><b>_eco_interiors_</b>${p.cap} <span class="more">more</span></div></div></div>`).join('');
-const g=[['s094.jpg',1],['q','Reveal, don’t cover.',2],['s060.jpg',1],['c19.jpg',2],['ba',3],['s091.jpg',4],['s114.jpg',1],['q','“How will you clean it?”',2],['s052.jpg',5],['s067.jpg',1],['c8.jpg',4],['s035.jpg',3]];
-document.getElementById('grid').innerHTML=g.map(t=>`<div>${t[0]==='q'?`<div class="quote-tile">${t[1]}</div>`:t[0]==='ba'?`<div class="split2"><img src="/clients/ecointeriors/img/b1142.jpg" alt="Kitchen before"><img src="/clients/ecointeriors/img/s031.jpg" alt="Kitchen after"></div>`:`<img src="/clients/ecointeriors/img/${t[0]}" alt="">`}</div>`).join('');
+const g=[['s094.jpg',1,'Buderim'],['f2.jpg',4,'Fingal Heads'],['q','Reveal, don’t cover.',2],['e1.jpg',2,'Estelle'],['ba',3,'Buderim'],['g1.jpg',5,'Woolloongabba'],['f1.jpg',5,'Fingal Heads'],['q','“How will you clean it?”',2],['s060.jpg',1,'Buderim'],['s091.jpg',4,'Buderim'],['e1.jpg',2,'Estelle'],['c8.jpg',4,'Buderim']];
+document.getElementById('grid').innerHTML=g.map(t=>`<div>${t[0]==='q'?`<div class="quote-tile">${t[1]}</div>`:t[0]==='ba'?`<div class="split2"><img src="/clients/ecointeriors/img/b1142.jpg" alt="Kitchen before"><img src="/clients/ecointeriors/img/s031.jpg" alt="Kitchen after"></div>`:`<img src="/clients/ecointeriors/img/${t[0]}" alt=""><span class="ptag">${t[2]}</span>`}</div>`).join('');
 const L=[['1','The brief behind the home','Project stories: the loft, the light boxes, the exterior. Most space.'],['2','Health by Design','Quote tiles and finish details. Most space.'],['3','Inside the design process','Before and after pairs from the December 2024 photos.'],['4','Through Sally’s eye','Single images of what made her stop.'],['5','Working with Eco Interiors','Client relationships and a natural invitation.']];
-document.getElementById('legend').innerHTML=L.map(l=>`<div><span>${l[0]}</span><p><b>${l[1]}</b><br><span class="small" style="font:13px Montserrat,sans-serif;color:inherit;opacity:.75">${l[2]}</span></p></div>`).join('')+`<p class="note">Rhythm: around 15 posts batched across the Christmas break, then two weeks at a time. Stories stay loose and in the moment.</p>`;
+document.getElementById('legend').innerHTML=L.map(l=>`<div><span>${l[0]}</span><p><b>${l[1]}</b><br><span class="small" style="font:13px Montserrat,sans-serif;color:inherit;opacity:.75">${l[2]}</span></p></div>`).join('')+`<p class="note"><b>Four homes, one voice.</b> Buderim House, Fingal Heads, Estelle House and Woolloongabba rotate through the grid, so it reads as a portfolio, not one project. The three messages and Sally’s voice tie them together, not a single style.</p><p class="note">Rhythm: around 15 posts batched across the Christmas break, then two weeks at a time. Stories stay loose and in the moment.</p>`;
 const F=[['Week 1 · Tue','s094.jpg',1,0,'Carousel: “Not designed for Instagram”'],['Week 1 · Thu','q:“How will you clean it?”',2,1,'Quote tile, then a three-finish carousel'],['Week 1 · Sat','s091.jpg',4,0,'Single image: what made Sally stop'],['Week 2 · Tue','ba',3,2,'Before-and-after reel'],['Week 2 · Thu','s067.jpg',1,0,'Carousel: light boxes, not downlights'],['Week 2 · Sat','s052.jpg',5,2,'Client story, ending with an invitation']];
 const MM=[['ca','Brief first'],['cb','Health by Design'],['cc','Whole home']];
 document.getElementById('fort').innerHTML=F.map(f=>`<figure><p class="d">${f[0]}</p><div class="ti">${f[1].startsWith('q:')?`<div class="quote-tile">${f[1].slice(2)}</div>`:f[1]==='ba'?`<div class="split2"><img src="/clients/ecointeriors/img/b1136.jpg" alt="Before"><img src="/clients/ecointeriors/img/c13.jpg" alt="After"></div>`:`<img src="/clients/ecointeriors/img/${f[1]}" alt="">`}</div><div style="margin-top:10px"><span class="chip cx">Pillar ${f[2]}</span><span class="chip ${MM[f[3]][0]}">${MM[f[3]][1]}</span></div><p>${f[4]}</p></figure>`).join('');
